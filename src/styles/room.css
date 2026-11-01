@@ -13,3 +13,7 @@ header{position:relative;z-index:10}.room-title{padding-top:155px;padding-bottom
 
 /* Match each manga panel’s native portrait proportions instead of stretching the sheet. */
 .manga{width:min(100%, 145px);height:auto;aspect-ratio:1774 / 4435;margin-inline:auto;background-repeat:no-repeat;image-rendering:pixelated}
+
+/* Optional device preview; Auto uses the device’s natural responsive layout. */
+.device-view-label{display:flex;align-items:center;gap:6px;color:#d3c4a7;font-size:10px;white-space:nowrap}.device-view-label select{color:#e7dab8;background:#28332f;border:1px solid #8c8065;border-radius:3px;padding:7px;font-size:11px}html[data-view="phone"] body{width:min(100%,390px);margin-inline:auto}html[data-view="phone"] dialog{width:min(90vw,350px)}html[data-view="phone"] .familiar{right:max(8px,calc((100vw - 390px)/2 + 8px))}html[data-view="computer"] body{min-width:1024px}html[data-view="phone"] header .small,html[data-view="computer"] header .small{margin-left:auto}
+html[data-view="phone"] .familiar .speech{max-width:270px}html[data-view="phone"] .wordmark{font-size:20px}html[data-view="phone"] .brand-hat{width:32px;height:32px}html[data-view="phone"] header{gap:8px}html[data-view="phone"] .device-view-label{margin-left:auto}

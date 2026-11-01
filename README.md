@@ -11,16 +11,6 @@ But what happens when reading quickly is not how your mind works? For a dyslexic
 Pip, your wizard-cat librarian, guides you around the shelf, keeps you company as you listen, and offers questions to help you reflect on what you’ve learned. Your feedback helps the app adapt how it explains ideas. The longer-term vision includes helping you judge a paper’s credibility and relevance.
 
 
-## How I used Codex
-
-I built Alexandria Library with Codex as my coding partner. I shared the bookshelf idea, research papers, audio examples and visual references, then used Codex to inspect the material, build the app, test its interactions and refine the experience. Codex helped with the Astro interface, Pip’s guided tour, the audio player and transcript, local drafts and feedback, as well as the project’s architecture, documentation and GitHub workflow.
-
-For Pip, I borrowed Codex’s **hatch-pet** skill and combined it with ImageGen to turn my wizard-cat reference into a character for the library. The workflow created and checked animation frames for actions such as idle, waving and running, and the app uses those ideas to bring Pip into the reading experience. The [artwork notes](public/art/README.md) describe the prompts and asset provenance; Pip is part of this website.
-
-Codex also built the code behind the library’s research and audio workflows. The [refresh script](scripts/refresh.mjs) gathers arXiv metadata and research prompts; the [generation worker](scripts/worker.mjs) is designed to turn a selected source into a two-host script, audio, transcript, quiz and optional illustrations. These are app workflows created with Codex; new audio generation uses the configured cloud services described below.
-
-One example I could check: I wanted listeners to answer three questions after an episode. Codex implemented the end-of-playback rule so seeking to the end opens the same quiz as listening through, added a test for the threshold, and checked the quiz and feedback in the browser.
-
 ## A look inside
 
 The reading room and open-book view shown here are from the local development preview.
@@ -51,7 +41,17 @@ Choose **Generate podcast** on a shelf to pick a recent paper and set the length
 
 At the end of an episode, Pip presents three questions based on its transcript. You can check your answers and share how difficult and useful the conversation felt.
 
-![Pip’s end-of-episode quiz in the mobile book view](docs/screenshots/episode-quiz.jpg)
+![Pip’s end-of-episode quiz in the desktop book view](docs/screenshots/episode-quiz.jpg)
+
+## How I used Codex
+
+I built Alexandria Library with Codex as my coding partner. I shared the bookshelf idea, research papers, audio examples and visual references, then used Codex to inspect the material, build the app, test its interactions and refine the experience. Codex helped with the Astro interface, Pip’s guided tour, the audio player and transcript, local drafts and feedback, as well as the project’s architecture, documentation and GitHub workflow.
+
+For Pip, I borrowed Codex’s **hatch-pet** skill and combined it with ImageGen to turn my wizard-cat reference into a character for the library. The workflow created and checked animation frames for actions such as idle, waving and running, and the app uses those ideas to bring Pip into the reading experience. The [artwork notes](public/art/README.md) describe the prompts and asset provenance; Pip is part of this website.
+
+Codex also built the code behind the library’s research and audio workflows. The [refresh script](scripts/refresh.mjs) gathers arXiv metadata and research prompts; the [generation worker](scripts/worker.mjs) is designed to turn a selected source into a two-host script, audio, transcript, quiz and optional illustrations. These are app workflows created with Codex; new audio generation uses the configured cloud services described below.
+
+One example I could check: I wanted listeners to answer three questions after an episode. Codex implemented the end-of-playback rule so seeking to the end opens the same quiz as listening through, added a test for the threshold, and checked the quiz and feedback in the browser.
 
 ## How it works
 
@@ -85,7 +85,7 @@ npm ci
 npm run dev
 ```
 
-Open the local address printed in the terminal (normally [http://localhost:4321](http://localhost:4321)). Choose a book to explore its paper and transcript. Pip will help you find your way around; a three-question quiz follows each playable sample episode. Your PDF drafts and feedback stay in your browser.
+Open the local address printed in the terminal (normally [http://localhost:4321](http://localhost:4321)). Choose a book to explore its paper and transcript. Pip will help you find your way around; a three-question quiz follows each playable sample episode. The View selector starts in Auto, adapting to your screen, and also lets you choose Phone or Computer. Your PDF drafts and feedback stay in your browser.
 
 The repository includes the sample book information, artwork and transcripts. The five original audio recordings are personal files, so to listen to those examples, use your copy of the audio archive:
 
