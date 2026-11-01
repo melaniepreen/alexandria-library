@@ -10,9 +10,12 @@
     "test": "node --test tests/*.test.mjs",
     "refresh": "node --env-file=.env scripts/refresh.mjs",
     "worker": "node --env-file=.env scripts/worker.mjs",
-    "seed": "node --env-file=.env scripts/seed.mjs"
+    "seed": "node --env-file=.env scripts/seed.mjs",
+    "build:local": "ASTRO_TELEMETRY_DISABLED=1 LOCAL_PREVIEW=1 astro build",
+    "start:local": "HOST=127.0.0.1 PORT=4330 node .local-build/server/entry.mjs"
   },
   "dependencies": {
+    "@astrojs/node": "^11.1.9",
     "@astrojs/vercel": "^11.0.17",
     "astro": "^7.4.4",
     "fast-xml-parser": "^5.3.0",

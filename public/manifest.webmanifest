@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "Alexandria Library",
+  "short_name": "Alexandria",
+  "description": "Research conversations, saved for slow listening.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#1b2525",
+  "theme_color": "#1b2525",
+  "icons": [
+    {
+      "src": "/icons/alexandria-hat.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

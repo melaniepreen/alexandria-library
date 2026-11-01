@@ -19,3 +19,14 @@ create or replace function begin_refresh() returns boolean language plpgsql secu
 revoke all on function begin_refresh() from public,anon,authenticated;grant execute on function begin_refresh() to service_role;
 
 alter table jobs add column cover_key text,add column comic_key text,add column art_error text;
+
+-- Shared visitor generation: the server owns all credentials; quotas bound paid work.
+alter table jobs add column visitor_hash text;
+create or replace function take_public_request(visitor text,kind text,daily_limit int default 10) returns boolean language plpgsql security definer set search_path=public as $$ declare n int;g int;cap int;begin
+if length(visitor)<>64 or kind not in ('generation','feedback') then return false;end if;
+cap:=case when kind='generation' then 2 else 30 end;
+insert into request_limits values('public:'||kind||':'||visitor,now(),1) on conflict(id) do update set hits=case when request_limits.window_at<date_trunc('day',now()) then 1 else request_limits.hits+1 end,window_at=case when request_limits.window_at<date_trunc('day',now()) then now() else request_limits.window_at end returning hits into n;
+if n>cap then return false;end if;
+insert into request_limits values('global:'||kind,now(),1) on conflict(id) do update set hits=case when request_limits.window_at<date_trunc('day',now()) then 1 else request_limits.hits+1 end,window_at=case when request_limits.window_at<date_trunc('day',now()) then now() else request_limits.window_at end returning hits into g;
+return g<=case when kind='generation' then least(100,greatest(1,daily_limit)) else 500 end;end;$$;
+revoke all on function take_public_request(text,text,int) from public,anon,authenticated;grant execute on function take_public_request(text,text,int) to service_role;

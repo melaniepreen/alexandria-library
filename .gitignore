@@ -10,3 +10,5 @@ public/art/references/
 art-runs/
 qa/
 .DS_Store
+
+.local-build/
