@@ -13,7 +13,7 @@ export async function POST({request}){
     const owner=authorized(request);
     if(!configured()||!env('OPENAI_API_KEY'))return json({error:'The library owner has not connected podcast generation yet. You do not need your own database or API account.'},503);
     if(owner){const denied=await guard(request);if(denied)return denied;}
-    else if(env('ALLOW_PUBLIC_GENERATION')==='false'||!visitorHash(request))return json({error:'The library owner has not enabled visitor generation yet.'},503);
+    else if(!visitorHash(request))return json({error:'Visitor generation needs the library request-limit secret.'},503);
     if(!owner&&!/^\d{4}\.\d{4,5}$/.test(input.paperId))return json({error:'Choose a paper from the shared arXiv catalogue.'},400);
     const papers=await db(`papers?id=eq.${encodeURIComponent(input.paperId)}&select=*`);
     if(!papers.length)return json({error:'The selected paper is not available in the shared catalogue.'},404);
