@@ -4,10 +4,18 @@ We are expected to learn at the speed of AI. Every day brings another paper, ano
 
 But what happens when reading quickly is not how your mind works? For a dyslexic or neurodivergent learner, the distance between curiosity and comprehension can feel unnecessarily wide. Why should a wall of text be the one-size-fits-all gateway to discovery?
 
-**The Paper Familiar** is a listening library for curious minds who want another way in. It brings research into a welcoming bookshelf, with conversational podcasts, transcripts, visual stories and small questions to help ideas stick. Its goal is to turn recent arXiv research into engaging audio so your inner scientist can stay connected to new papers and discoveries at a pace that works for you.
+**The Paper Familiar** is a listening library for curious minds who want another way in. It brings research into a welcoming bookshelf, with conversational podcasts, transcripts, visual stories and small questions to help ideas stick. Its goal is to turn recent arXiv research into engaging audio so your inner scientist can stay connected to new papers and discoveries at a pace that works for you. Along the way, Pip, your wizard-cat librarian, guides you around the shelf, keeps you company as you listen, and offers questions to help you reflect on what you’ve learned.
 
 The vision is to help you judge whether a paper is credible and relevant to you. Today, the app’s own Decision endpoint adapts explanation style using your feedback; it does **not** yet assess scientific credibility. Recent-paper refresh and new podcast generation require the cloud services described below.
 
+
+## A look inside
+
+These screenshots show the current local development preview; some ongoing changes may not yet be included in the published code.
+
+![The reading room bookshelf with Pip, the wizard-cat guide](docs/screenshots/bookshelf.jpg)
+
+![An open research book with its audio conversation and Pip’s guidance](docs/screenshots/book-detail.jpg)
 
 ## Run
 
