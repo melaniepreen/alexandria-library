@@ -2,6 +2,7 @@ import {createHmac} from 'node:crypto';
 const env=(k)=>process.env[k] || import.meta.env?.[k];
 export {env};
 export function supabaseHeaders(key=env('SUPABASE_SERVICE_ROLE_KEY')){return {apikey:key,...(key?.startsWith('sb_secret_')?{}:{Authorization:`Bearer ${key}`})};}
+export function supabaseHeaders(key=env('SUPABASE_SERVICE_ROLE_KEY')){return {apikey:key,...(key?.startsWith('sb_secret_')?{}:{Authorization:`Bearer ${key}`})};}
 export function configured(){return !!(env('SUPABASE_URL')&&env('SUPABASE_SERVICE_ROLE_KEY'));}
 export async function db(path,options={}){if(!configured())throw new Error('Cloud storage is not configured');const r=await fetch(`${env('SUPABASE_URL')}/rest/v1/${path}`,{...options,headers:{...supabaseHeaders(),'Content-Type':'application/json',Prefer:'return=representation',...options.headers}});if(!r.ok)throw new Error(`Storage request failed (${r.status})`);const t=await r.text();return t?JSON.parse(t):null;}
 export function authorized(request){const t=env('OWNER_TOKEN');return !!t&&request.headers.get('authorization')===`Bearer ${t}`;}
