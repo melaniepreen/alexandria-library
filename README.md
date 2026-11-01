@@ -1,8 +1,13 @@
 # The Paper Familiar
 
-For curious researchers, students and independent learners who collect more papers than they have time to read. The Paper Familiar turns a reading list into a visual listening library, pairing research with conversations, transcripts and short comprehension checks.
+We are expected to learn at the speed of AI. Every day brings another paper, another breakthrough, another piece of documentation we are told to read to keep up.
 
-An Astro research bookshelf with a reference-matched pixel wizard cat, five real supplied podcast recordings, timed automatic transcripts, monochrome pixel manga, quizzes, local PDF drafts and feedback. The original prototype is maintained separately and is not part of this repository.
+But what happens when reading quickly is not how your mind works? For a dyslexic or neurodivergent learner, the distance between curiosity and comprehension can feel unnecessarily wide. Why should a wall of text be the one-size-fits-all gateway to discovery?
+
+**The Paper Familiar** is a listening library for curious minds who want another way in. It brings research into a welcoming bookshelf, with conversational podcasts, transcripts, visual stories and small questions to help ideas stick. Its goal is to turn recent arXiv research into engaging audio so your inner scientist can stay connected to new papers and discoveries at a pace that works for you.
+
+The vision is to help you judge whether a paper is credible and relevant to you. Today, the app’s own Decision endpoint adapts explanation style using your feedback; it does **not** yet assess scientific credibility. Recent-paper refresh and new podcast generation require the cloud services described below.
+
 
 ## Run
 

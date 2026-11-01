@@ -1,6 +1,14 @@
 # The Paper Familiar
 
-**Project name + description:** The Paper Familiar is a visual research listening library for researchers, students and curious independent learners. Academic papers are hard to keep up with, and reading lists often grow faster than available reading time. The app presents papers as books in a cozy library, with a wizard-cat guide, audio conversations, automatic transcripts, conceptual manga artwork and three-question comprehension checks.
+**Project name + description:**
+
+We are expected to learn at the speed of AI. Every day brings another paper, another breakthrough, another piece of documentation we are told to read to keep up.
+
+But what happens when reading quickly is not how your mind works? For a dyslexic or neurodivergent learner, the distance between curiosity and comprehension can feel unnecessarily wide. Why should a wall of text be the one-size-fits-all gateway to discovery?
+
+**The Paper Familiar** is a listening library for curious minds who want another way in. It brings research into a welcoming bookshelf, with conversational podcasts, transcripts, visual stories and small questions to help ideas stick. Its goal is to turn recent arXiv research into engaging audio so your inner scientist can stay connected to new papers and discoveries at a pace that works for you.
+
+The vision is to help you judge whether a paper is credible and relevant to you. Today, the app’s own Decision endpoint adapts explanation style using your feedback; it does **not** yet assess scientific credibility. Recent-paper refresh and new podcast generation require the cloud services described below.
 
 - [x] **Public GitHub repository:** [melaniepreen/paper-familiar](https://github.com/melaniepreen/paper-familiar). See [README.md](README.md) for local setup, optional audio restoration and cloud configuration.
 - [x] **What was built today — 1 November 2026:** An Astro bookshelf interface; five archival episode entries; transcript and quiz views; local PDF drafts; usefulness/difficulty feedback; generated conceptual manga and wizard-cat artwork; server routes, a database schema and a durable worker scaffold for generation, refresh and email. Existing recordings are supplied examples, not newly generated episodes. Live cloud/provider integrations remain unverified until credentials and services are configured.
