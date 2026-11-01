@@ -39,49 +39,35 @@ flowchart LR
 
 The bookshelf brings together source papers, audio conversations, transcripts, conceptual manga and three-question quizzes. Browser storage keeps local PDF drafts and feedback on the device. The app’s Decision endpoint uses saved feedback to suggest an explanation style; scientific credibility assessment is part of the project vision. For fresh research and new episodes, configure the services below: arXiv supplies paper metadata, Supabase stores records and generated assets, and a durable worker coordinates OpenAI text, speech and optional illustration generation. Resend supports email requested by the reader.
 
-## Run locally
+## Try it on your computer
 
-Use Node 24, then install dependencies and start the app:
+You’ll need [Node.js 24](https://nodejs.org/) and Git. Open a terminal and run:
 
 ```sh
+git clone https://github.com/melaniepreen/alexandria-library.git
+cd alexandria-library
 npm ci
 npm run dev
 ```
 
-Open [http://localhost:4321](http://localhost:4321). Browse the bookshelf, read transcripts, explore the quizzes and save local drafts and feedback. The five archival sample recordings can be restored from your copy of the supplied audio archive:
+Open the local address printed in the terminal (normally [http://localhost:4321](http://localhost:4321)). Choose a book to explore its paper and transcript. Pip will help you find your way around; a three-question quiz follows each playable sample episode. Your PDF drafts and feedback stay in your browser.
+
+The repository includes the sample book information, artwork and transcripts. The five original audio recordings are personal files, so to listen to those examples, use your copy of the audio archive:
 
 ```sh
-python3 scripts/restore_audio.py "/path/to/Audio overviews-20261101T134113Z-1-001.zip"
+python3 scripts/restore_audio.py "/path/to/your/Audio overviews-20261101T134113Z-1-001.zip"
 ```
 
-The sample collection links five finance and quantum papers to existing recordings and locally generated automatic transcripts. Transcript wording and research claims are starting points for exploration; follow the source links to read the original papers. The included arXiv catalogue is a dated snapshot; the refresh service updates it when configured.
+Replace the path with the location of your ZIP file. Restart the app if it is already running. You can explore the bookshelf and transcripts without the ZIP. The included research catalogue is a dated snapshot; its links lead to the original papers.
 
-Run the project checks with:
+To check the project, run `npm test` and `npm run build`.
 
-```sh
-npm test
-npm run build
-```
+## Create new episodes and send email
 
-## Configure generation and delivery
+The bookshelf can be explored locally. Generating fresh podcasts, refreshing the catalogue automatically and sending email use optional cloud services and provider accounts. When you are ready to set those up, follow the [cloud setup guide](docs/CLOUD-SETUP.md). This also explains deployment on Vercel and the separate worker that creates episodes.
 
-The cloud setup uses Vercel for the Astro application, Supabase for PostgreSQL and private object storage, a durable Node worker, OpenAI for generation, and Resend for requested emails. Configure only the services you plan to use.
+## How I used Codex
 
-1. Create a Supabase project and run [`supabase.sql`](supabase.sql) in a fresh database. The application tables use row-level security, and the `episodes` storage bucket is private.
-2. Copy [`.env.example`](.env.example) to `.env` and set the server-side Supabase and OpenAI values. Generate independent long random values for `OWNER_TOKEN` and `CRON_SECRET`, and set `SITE_URL` to your application URL. Keep `.env` private.
-3. Run `npm run seed` to add the five sample paper records. Run `npm run refresh` to retrieve recent finance and quantum metadata and create abstract-grounded finance research prompts when an OpenAI key is configured.
-4. Run `npm run worker` on a durable Node host with a process supervisor or scheduler. Each invocation claims one queued job, creates a source-grounded conversational script and AI-voiced audio, validates its duration, and stores the resulting assets. Job status is visible in the app. Set provider spending limits appropriate for your project.
-5. Set `IMAGE_MODEL` to an available Images API model, such as `gpt-image-2.5-sunburst`, to generate transcript-grounded cover and comic illustrations. The sample artwork provides a visual starting point.
-6. To enable requested email, set `RESEND_API_KEY` and `EMAIL_FROM` using a verified sender or domain. Enter the `OWNER_TOKEN` through the app’s settings to access owner-only cloud actions.
+I used Codex as a building partner to turn the initial bookshelf idea into a working prototype. Codex inspected the supplied paper and audio archives, built the interactive library and local draft flow, and helped develop the Astro version with Pip, transcripts, quizzes and feedback. It also used image generation to create the visual assets and recorded the prompts in the [artwork notes](public/art/README.md).
 
-For full-paper generation, paste extracted paper text into **Add a paper**. Generation uses the supplied source text or the arXiv abstract and labels the source scope. The worker validates source references, quiz evidence and audio duration; readers should evaluate the original paper and its scientific claims themselves.
-
-The refresh process uses a three-hour cache and lock, deduplicates arXiv versions, and spaces API requests. An existing worker host can schedule `npm run refresh` every three hours. For Vercel cron, consult the [plan limits](https://vercel.com/docs/cron-jobs/usage-and-pricing) and the optional [`vercel.pro-cron.example.json`](vercel.pro-cron.example.json). Review current [OpenAI pricing](https://developers.openai.com/api/docs/pricing) and your storage, hosting and email costs before enabling paid services.
-
-## Deploy
-
-The project includes an Astro Vercel adapter. Import [the GitHub repository](https://github.com/melaniepreen/alexandria-library) into Vercel, select Node 24, use `npm ci` to install and `npm run build` to build, and add the server environment variables for your selected services. The durable worker runs separately on a Node host. The [project summary](PROJECT.md) describes the audience, today’s build and a concrete example of Codex in the workflow.
-
-## Built with Codex
-
-Codex helped build the listening and quiz experience, including the completion rule that opens the same three-question quiz when a listener seeks to the end. The repository includes tests for that rule alongside catalogue, feedback and sample-data checks. Artwork prompts and provenance are documented in [`public/art/README.md`](public/art/README.md).
+One concrete example: I wanted listeners to answer three questions after an episode. Codex implemented the completion rule so seeking to the end opens the same quiz as listening through, wrote a test for the end-of-playback threshold, and checked the quiz and feedback flow in the browser. Codex also helped document the setup, create the architecture diagram and prepare this public repository.
