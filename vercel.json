@@ -1,1 +1,1 @@
-{"framework":"astro"}
+{"framework":"astro","functions":{"src/pages/api/generate.ts":{"maxDuration":300}}}
