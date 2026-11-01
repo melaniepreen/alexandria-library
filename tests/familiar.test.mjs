@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {animationRows,frameAt,clampPosition} from '../src/client/familiar.js';
+test('Codex animation contract keeps unused cells out of playback',()=>{assert.deepEqual(Object.values(animationRows).map(s=>s.durations.length),[6,8,8,4,5,8,6,6,6]);for(const [name,s] of Object.entries(animationRows)){for(let t=0;t<3000;t+=17){const frame=frameAt(name,t);assert.equal(frame.row,s.row);assert.ok(frame.frame<s.durations.length);}}});
+test('timings wrap at the end and preserve final hold',()=>{assert.equal(frameAt('idle',0).frame,0);assert.equal(frameAt('idle',279).frame,0);assert.equal(frameAt('idle',280).frame,1);assert.equal(frameAt('idle',1099).frame,5);assert.equal(frameAt('idle',1100).frame,0);});
+test('drag bounds keep the companion on screen',()=>{assert.deepEqual(clampPosition(-100,-50,100,100,400,700),{x:8,y:8});assert.deepEqual(clampPosition(1000,1000,100,100,400,700),{x:292,y:592});});

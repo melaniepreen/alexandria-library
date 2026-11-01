@@ -1,0 +1,1287 @@
+{
+  "source": "Reinforcement Learning For Quantitative Trading.mp3",
+  "method": "faster-whisper tiny.en; automatic, speaker attribution unverified",
+  "duration": 583.0,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.32,
+      "text": "So, we love to think of the global financial market"
+    },
+    {
+      "start": 3.32,
+      "end": 6.92,
+      "text": "as this, you know, perfectly rational machine."
+    },
+    {
+      "start": 6.92,
+      "end": 9.48,
+      "text": "Right, like it's all just clean, math and logic."
+    },
+    {
+      "start": 9.48,
+      "end": 12.44,
+      "text": "Exactly, but if you look at the study we are unpacking today"
+    },
+    {
+      "start": 12.44,
+      "end": 14.84,
+      "text": "for Melanie, you realize pretty quickly"
+    },
+    {
+      "start": 14.84,
+      "end": 18.48,
+      "text": "that it's actually an 80 trillion dollar ecosystem"
+    },
+    {
+      "start": 18.48,
+      "end": 21.84,
+      "text": "of like pure unpredictable chaos."
+    },
+    {
+      "start": 21.84,
+      "end": 23.68,
+      "text": "Oh, absolutely, it's incredibly messy."
+    },
+    {
+      "start": 23.68,
+      "end": 25.84,
+      "text": "Yeah, and Melanie, we know you are the learner."
+    },
+    {
+      "start": 25.84,
+      "end": 28.28,
+      "text": "You want the deep knowledge, the real insights,"
+    },
+    {
+      "start": 28.32,
+      "end": 31.12,
+      "text": "but you hate the information overload."
+    },
+    {
+      "start": 31.12,
+      "end": 32.88,
+      "text": "Which is totally fair, there's a lot of noise out there."
+    },
+    {
+      "start": 32.88,
+      "end": 35.32,
+      "text": "Right, so our mission for this exploration"
+    },
+    {
+      "start": 35.32,
+      "end": 37.84,
+      "text": "into the source material today is to basically see"
+    },
+    {
+      "start": 37.84,
+      "end": 40.36,
+      "text": "how the exact same AI that, you know,"
+    },
+    {
+      "start": 40.36,
+      "end": 42.6,
+      "text": "conquered video games and mastered go"
+    },
+    {
+      "start": 42.6,
+      "end": 45.44,
+      "text": "is now trying to tame that financial chaos."
+    },
+    {
+      "start": 45.44,
+      "end": 47.72,
+      "text": "And it really is a massive conceptual shift."
+    },
+    {
+      "start": 47.72,
+      "end": 51.88,
+      "text": "We're pulling all this from a pretty dense 26 page 2021"
+    },
+    {
+      "start": 51.88,
+      "end": 54.88,
+      "text": "academic survey from Nan Yang technological university."
+    },
+    {
+      "start": 54.88,
+      "end": 56.8,
+      "text": "Right, the one titled Reinforcement Learning"
+    },
+    {
+      "start": 56.84,
+      "end": 58.28,
+      "text": "for Quantitative Trading."
+    },
+    {
+      "start": 58.28,
+      "end": 59.6,
+      "text": "Yeah, that's the one."
+    },
+    {
+      "start": 59.6,
+      "end": 62.48,
+      "text": "And we're gonna extract the most fascinating parts"
+    },
+    {
+      "start": 62.48,
+      "end": 66.28,
+      "text": "to see how this tech scales from like abstract theory"
+    },
+    {
+      "start": 66.28,
+      "end": 70.32,
+      "text": "all the way down to literal millisecond level execution."
+    },
+    {
+      "start": 70.32,
+      "end": 72.08,
+      "text": "Okay, let's unpack this."
+    },
+    {
+      "start": 72.08,
+      "end": 74.36,
+      "text": "Because before we can even look at the playground"
+    },
+    {
+      "start": 74.36,
+      "end": 76.92,
+      "text": "the AI operates in, I feel like we have to understand"
+    },
+    {
+      "start": 76.92,
+      "end": 78.8,
+      "text": "the brain of the AI itself."
+    },
+    {
+      "start": 78.8,
+      "end": 80.4,
+      "text": "Yeah, you have to start with the why."
+    },
+    {
+      "start": 80.4,
+      "end": 82.68,
+      "text": "Like why move away from traditional AI?"
+    },
+    {
+      "start": 82.68,
+      "end": 84.68,
+      "text": "Right, because traditional machine learning"
+    },
+    {
+      "start": 84.68,
+      "end": 87.88,
+      "text": "in finance, which is, you know, supervised learning,"
+    },
+    {
+      "start": 87.88,
+      "end": 90.4,
+      "text": "it feels like trying to mathematically predict"
+    },
+    {
+      "start": 90.4,
+      "end": 93.2,
+      "text": "the exact path of a bouncing ball in a hurricane."
+    },
+    {
+      "start": 93.2,
+      "end": 94.96,
+      "text": "That is a perfect way to put it, honestly."
+    },
+    {
+      "start": 94.96,
+      "end": 96.76,
+      "text": "I mean, it just looks at past data"
+    },
+    {
+      "start": 96.76,
+      "end": 99.24,
+      "text": "and tries to predict a future price,"
+    },
+    {
+      "start": 99.24,
+      "end": 102.0,
+      "text": "but the environment is so impossibly noisy."
+    },
+    {
+      "start": 102.0,
+      "end": 103.16,
+      "text": "It just doesn't work."
+    },
+    {
+      "start": 103.16,
+      "end": 105.88,
+      "text": "What's fascinating here is that reinforcement learning"
+    },
+    {
+      "start": 105.88,
+      "end": 109.88,
+      "text": "or RL bypasses that impossible task entirely."
+    },
+    {
+      "start": 109.88,
+      "end": 112.24,
+      "text": "It just abandons the whole idea of predicting the future."
+    },
+    {
+      "start": 112.24,
+      "end": 115.04,
+      "text": "Really, it doesn't even try to guess the price."
+    },
+    {
+      "start": 115.04,
+      "end": 115.96,
+      "text": "Not at all."
+    },
+    {
+      "start": 115.96,
+      "end": 118.8,
+      "text": "It builds what they call an end-to-end agent."
+    },
+    {
+      "start": 118.8,
+      "end": 121.0,
+      "text": "So instead of outputting a price guess,"
+    },
+    {
+      "start": 121.0,
+      "end": 124.12,
+      "text": "it takes the current market state like all the current variables"
+    },
+    {
+      "start": 124.12,
+      "end": 126.96,
+      "text": "as its input and directly outputs an action."
+    },
+    {
+      "start": 126.96,
+      "end": 127.72,
+      "text": "Oh, wow."
+    },
+    {
+      "start": 127.72,
+      "end": 129.84,
+      "text": "So just like buy, sell or hold."
+    },
+    {
+      "start": 129.84,
+      "end": 130.68,
+      "text": "Exactly."
+    },
+    {
+      "start": 130.68,
+      "end": 132.92,
+      "text": "It just optimized entirely for a reward."
+    },
+    {
+      "start": 132.92,
+      "end": 136.12,
+      "text": "And you know, in this case, the reward is obviously profit."
+    },
+    {
+      "start": 136.12,
+      "end": 139.64,
+      "text": "So, okay, for Melanie, the core aha moment here"
+    },
+    {
+      "start": 139.64,
+      "end": 142.16,
+      "text": "is this shift in strategy."
+    },
+    {
+      "start": 142.2,
+      "end": 144.24,
+      "text": "Like in a highly chaotic system,"
+    },
+    {
+      "start": 144.24,
+      "end": 148.04,
+      "text": "teaching an AI how to react for maximum reward is,"
+    },
+    {
+      "start": 148.04,
+      "end": 150.04,
+      "text": "well, infinitely more effective"
+    },
+    {
+      "start": 150.04,
+      "end": 151.76,
+      "text": "than trying to build a crystal ball"
+    },
+    {
+      "start": 151.76,
+      "end": 153.4,
+      "text": "to predict the exact future."
+    },
+    {
+      "start": 153.4,
+      "end": 155.96,
+      "text": "Yeah, it's about reacting, not predicting."
+    },
+    {
+      "start": 155.96,
+      "end": 158.08,
+      "text": "And they could even bake in real world friction,"
+    },
+    {
+      "start": 158.08,
+      "end": 161.04,
+      "text": "like transaction fees right into that learning process."
+    },
+    {
+      "start": 161.04,
+      "end": 163.04,
+      "text": "Because it's focused on the final action,"
+    },
+    {
+      "start": 163.04,
+      "end": 165.04,
+      "text": "not just some theoretical price target."
+    },
+    {
+      "start": 165.04,
+      "end": 167.88,
+      "text": "Right, but taking that profit-seeking brain out of the lab"
+    },
+    {
+      "start": 167.88,
+      "end": 169.24,
+      "text": "and into the real world,"
+    },
+    {
+      "start": 169.24,
+      "end": 172.2,
+      "text": "well, that requires defining the scope of its vision."
+    },
+    {
+      "start": 172.2,
+      "end": 173.4,
+      "text": "What do you mean by scope?"
+    },
+    {
+      "start": 173.4,
+      "end": 175.24,
+      "text": "Like some AI agents are given tunnel vision."
+    },
+    {
+      "start": 175.24,
+      "end": 177.44,
+      "text": "They focus purely on algorithmic trading"
+    },
+    {
+      "start": 177.44,
+      "end": 178.88,
+      "text": "for just a single asset."
+    },
+    {
+      "start": 178.88,
+      "end": 181.08,
+      "text": "Oh, like just trading Apple stock or something?"
+    },
+    {
+      "start": 181.08,
+      "end": 181.92,
+      "text": "Exactly."
+    },
+    {
+      "start": 181.92,
+      "end": 184.72,
+      "text": "Just trying to squeeze every single drop of profit"
+    },
+    {
+      "start": 184.72,
+      "end": 186.56,
+      "text": "out of Tesla or Apple."
+    },
+    {
+      "start": 186.56,
+      "end": 188.48,
+      "text": "Whether that means holding a position for months"
+    },
+    {
+      "start": 188.48,
+      "end": 191.24,
+      "text": "or firing off microtrades all day long."
+    },
+    {
+      "start": 191.24,
+      "end": 193.92,
+      "text": "But a single asset doesn't exist in a vacuum, right?"
+    },
+    {
+      "start": 193.92,
+      "end": 196.48,
+      "text": "Like if an agent is only looking at Tesla,"
+    },
+    {
+      "start": 196.48,
+      "end": 199.28,
+      "text": "it's totally blind to the broader economy."
+    },
+    {
+      "start": 199.28,
+      "end": 201.2,
+      "text": "Yeah, it misses the macro picture completely."
+    },
+    {
+      "start": 201.2,
+      "end": 203.68,
+      "text": "Right, because to actually manage a full portfolio,"
+    },
+    {
+      "start": 203.68,
+      "end": 206.24,
+      "text": "it needs a wide angle lens."
+    },
+    {
+      "start": 206.24,
+      "end": 210.04,
+      "text": "It has to know that a shock in the energy sector"
+    },
+    {
+      "start": 210.04,
+      "end": 212.68,
+      "text": "is eventually going to hit the tech sector."
+    },
+    {
+      "start": 212.68,
+      "end": 214.48,
+      "text": "Yeah, and to solve that,"
+    },
+    {
+      "start": 214.48,
+      "end": 216.2,
+      "text": "developers are using this two brain system"
+    },
+    {
+      "start": 216.2,
+      "end": 217.8,
+      "text": "called actor critic architecture."
+    },
+    {
+      "start": 217.8,
+      "end": 220.28,
+      "text": "It's things like the DDPG algorithm."
+    },
+    {
+      "start": 220.28,
+      "end": 222.08,
+      "text": "Actor critic, how does that work?"
+    },
+    {
+      "start": 222.08,
+      "end": 226.32,
+      "text": "So one part of the AI, the actor decides what trade to make,"
+    },
+    {
+      "start": 226.36,
+      "end": 227.96,
+      "text": "and then the second part of the critic"
+    },
+    {
+      "start": 227.96,
+      "end": 230.16,
+      "text": "basically evaluates how good that decision was."
+    },
+    {
+      "start": 230.16,
+      "end": 231.96,
+      "text": "Oh, so it gets immediate feedback, right?"
+    },
+    {
+      "start": 231.96,
+      "end": 234.24,
+      "text": "Which helps it learn incredibly fast."
+    },
+    {
+      "start": 234.24,
+      "end": 236.88,
+      "text": "But to give it that wide angle lens you mentioned"
+    },
+    {
+      "start": 236.88,
+      "end": 238.4,
+      "text": "for portfolio management,"
+    },
+    {
+      "start": 238.4,
+      "end": 241.16,
+      "text": "they actually feed these systems through graph neural networks."
+    },
+    {
+      "start": 241.16,
+      "end": 242.12,
+      "text": "What graph neural networks?"
+    },
+    {
+      "start": 242.12,
+      "end": 245.36,
+      "text": "So giving the AI a map of the invisible strings"
+    },
+    {
+      "start": 245.36,
+      "end": 247.04,
+      "text": "connecting the entire market."
+    },
+    {
+      "start": 247.04,
+      "end": 247.84,
+      "text": "Basically, yeah."
+    },
+    {
+      "start": 247.84,
+      "end": 249.8,
+      "text": "But how is it actually drawing those lines?"
+    },
+    {
+      "start": 249.8,
+      "end": 251.88,
+      "text": "Like how does it know what's connected?"
+    },
+    {
+      "start": 251.88,
+      "end": 254.6,
+      "text": "It analyzes historical ripple effects."
+    },
+    {
+      "start": 254.6,
+      "end": 256.4,
+      "text": "The neural network maps out these spatial"
+    },
+    {
+      "start": 256.4,
+      "end": 258.24,
+      "text": "and temporal relationships."
+    },
+    {
+      "start": 258.24,
+      "end": 260.76,
+      "text": "So it learns, you know, how a semiconductor shortage"
+    },
+    {
+      "start": 260.76,
+      "end": 262.44,
+      "text": "in Taiwan on a Tuesday,"
+    },
+    {
+      "start": 262.44,
+      "end": 264.44,
+      "text": "statistically impacts a German automail."
+    },
+    {
+      "start": 264.44,
+      "end": 265.68,
+      "text": "They're by Thursday."
+    },
+    {
+      "start": 265.68,
+      "end": 267.08,
+      "text": "That is wild."
+    },
+    {
+      "start": 267.08,
+      "end": 268.88,
+      "text": "It weighs those invisible strings"
+    },
+    {
+      "start": 268.88,
+      "end": 270.32,
+      "text": "to build a holistic map."
+    },
+    {
+      "start": 270.32,
+      "end": 271.8,
+      "text": "It really does."
+    },
+    {
+      "start": 271.8,
+      "end": 274.52,
+      "text": "And they're also using multi objective RL."
+    },
+    {
+      "start": 274.52,
+      "end": 277.44,
+      "text": "So the AI doesn't just blindly chase profit."
+    },
+    {
+      "start": 277.44,
+      "end": 278.96,
+      "text": "Because that would be super risky."
+    },
+    {
+      "start": 278.96,
+      "end": 279.8,
+      "text": "Exactly."
+    },
+    {
+      "start": 279.8,
+      "end": 282.6,
+      "text": "It learns to balance returns against risk metrics."
+    },
+    {
+      "start": 282.64,
+      "end": 284.92,
+      "text": "The big one they look at is maximum drawdown,"
+    },
+    {
+      "start": 284.92,
+      "end": 286.84,
+      "text": "which is the largest drop from a peak."
+    },
+    {
+      "start": 286.84,
+      "end": 289.6,
+      "text": "So it actively tries to avoid catastrophic losses."
+    },
+    {
+      "start": 289.6,
+      "end": 290.44,
+      "text": "Okay."
+    },
+    {
+      "start": 290.44,
+      "end": 291.72,
+      "text": "So navigating the macro economy"
+    },
+    {
+      "start": 291.72,
+      "end": 293.6,
+      "text": "and picking up portfolios, one thing."
+    },
+    {
+      "start": 293.6,
+      "end": 297.56,
+      "text": "But making the decision to actually buy a million shares,"
+    },
+    {
+      "start": 297.56,
+      "end": 301.52,
+      "text": "that introduces a completely new hidden layer of physics"
+    },
+    {
+      "start": 301.52,
+      "end": 303.36,
+      "text": "to the execution of the trade itself."
+    },
+    {
+      "start": 303.36,
+      "end": 304.64,
+      "text": "Oh, a huge layer of physics,"
+    },
+    {
+      "start": 304.64,
+      "end": 306.12,
+      "text": "execution is a whole different beast."
+    },
+    {
+      "start": 306.12,
+      "end": 306.96,
+      "text": "Right."
+    },
+    {
+      "start": 306.96,
+      "end": 308.96,
+      "text": "Because think about buying concert tickets."
+    },
+    {
+      "start": 308.96,
+      "end": 311.72,
+      "text": "If you try to buy like 10,000 tickets"
+    },
+    {
+      "start": 311.72,
+      "end": 313.2,
+      "text": "at the exact same second,"
+    },
+    {
+      "start": 313.2,
+      "end": 316.08,
+      "text": "the ticketing algorithm sees that massive demand spike"
+    },
+    {
+      "start": 316.08,
+      "end": 318.24,
+      "text": "and instantly skyrockets the price."
+    },
+    {
+      "start": 318.24,
+      "end": 319.8,
+      "text": "It sees you coming from a mile away."
+    },
+    {
+      "start": 319.8,
+      "end": 321.04,
+      "text": "Yeah."
+    },
+    {
+      "start": 321.04,
+      "end": 322.0,
+      "text": "And in finance,"
+    },
+    {
+      "start": 322.0,
+      "end": 325.32,
+      "text": "this invisible physics is called market impact."
+    },
+    {
+      "start": 325.32,
+      "end": 327.56,
+      "text": "Basically the act of buying the thing"
+    },
+    {
+      "start": 327.56,
+      "end": 329.2,
+      "text": "changes the price of the thing."
+    },
+    {
+      "start": 329.2,
+      "end": 332.52,
+      "text": "And that's exactly where the micro level execution comes in."
+    },
+    {
+      "start": 332.52,
+      "end": 335.0,
+      "text": "So the AI has to fulfill that massive order"
+    },
+    {
+      "start": 335.0,
+      "end": 337.36,
+      "text": "within a set time frame say like an hour"
+    },
+    {
+      "start": 337.36,
+      "end": 339.0,
+      "text": "without alerting the whole market."
+    },
+    {
+      "start": 339.0,
+      "end": 340.4,
+      "text": "So how does it hide?"
+    },
+    {
+      "start": 340.44,
+      "end": 342.68,
+      "text": "It navigates what's called the limit order book"
+    },
+    {
+      "start": 342.68,
+      "end": 345.12,
+      "text": "or the L.O.B. at the millisecond level."
+    },
+    {
+      "start": 345.12,
+      "end": 348.56,
+      "text": "It basically slices up its huge purchase into tiny pieces"
+    },
+    {
+      "start": 348.56,
+      "end": 350.2,
+      "text": "and sneaks them into the ledger"
+    },
+    {
+      "start": 350.2,
+      "end": 352.56,
+      "text": "of everyone else's standing bids and asks."
+    },
+    {
+      "start": 352.56,
+      "end": 355.48,
+      "text": "Ah, so it's avoiding triggering that market impact"
+    },
+    {
+      "start": 355.48,
+      "end": 356.48,
+      "text": "by just blending in."
+    },
+    {
+      "start": 356.48,
+      "end": 357.84,
+      "text": "Right. That's order execution."
+    },
+    {
+      "start": 357.84,
+      "end": 360.16,
+      "text": "But then there's another micro task called market making."
+    },
+    {
+      "start": 360.16,
+      "end": 361.68,
+      "text": "Oh, were they act as the middle man?"
+    },
+    {
+      "start": 361.68,
+      "end": 363.72,
+      "text": "Like they try to become the market itself"
+    },
+    {
+      "start": 363.72,
+      "end": 366.32,
+      "text": "and scrape fractions of a penny off every transaction"
+    },
+    {
+      "start": 366.32,
+      "end": 367.8,
+      "text": "between buyers and sellers?"
+    },
+    {
+      "start": 367.8,
+      "end": 369.0,
+      "text": "Exactly."
+    },
+    {
+      "start": 369.0,
+      "end": 371.52,
+      "text": "But if we connect this to the bigger picture,"
+    },
+    {
+      "start": 371.52,
+      "end": 376.52,
+      "text": "that strategy exposes the AI to a terrifying vulnerability."
+    },
+    {
+      "start": 376.88,
+      "end": 379.08,
+      "text": "It's known as non-zero inventory."
+    },
+    {
+      "start": 379.08,
+      "end": 382.28,
+      "text": "Non-zero inventory, meaning they actually have to hold the stock."
+    },
+    {
+      "start": 382.28,
+      "end": 385.28,
+      "text": "Yeah, by quoting buy and sell prices simultaneously"
+    },
+    {
+      "start": 385.28,
+      "end": 387.32,
+      "text": "to capture that tiny spread,"
+    },
+    {
+      "start": 387.32,
+      "end": 391.16,
+      "text": "the agent often has to briefly hold the actual shares itself."
+    },
+    {
+      "start": 391.16,
+      "end": 394.04,
+      "text": "Meaning if the broader market suddenly drops in"
+    },
+    {
+      "start": 394.04,
+      "end": 397.36,
+      "text": "like a flash crash while the AI is holding the bag,"
+    },
+    {
+      "start": 397.36,
+      "end": 400.16,
+      "text": "that non-zero inventory plummets in value."
+    },
+    {
+      "start": 400.16,
+      "end": 402.92,
+      "text": "Exactly. It's forced to liquidate at a massive loss,"
+    },
+    {
+      "start": 402.92,
+      "end": 405.72,
+      "text": "which just instantly incinerates all those micro profits"
+    },
+    {
+      "start": 405.72,
+      "end": 407.28,
+      "text": "it's spent all day scraping together."
+    },
+    {
+      "start": 407.28,
+      "end": 409.2,
+      "text": "Which I guess brings up the core limitation"
+    },
+    {
+      "start": 409.2,
+      "end": 411.56,
+      "text": "holding this entire field back, right?"
+    },
+    {
+      "start": 411.56,
+      "end": 414.72,
+      "text": "Because since RL requires millions of trial and error attempts"
+    },
+    {
+      "start": 414.72,
+      "end": 417.52,
+      "text": "to learn anything, you can't just unleash a learning AI"
+    },
+    {
+      "start": 417.52,
+      "end": 418.6,
+      "text": "into the live market."
+    },
+    {
+      "start": 418.6,
+      "end": 419.44,
+      "text": "Definitely not."
+    },
+    {
+      "start": 419.44,
+      "end": 420.36,
+      "text": "It would lose millions of dollars"
+    },
+    {
+      "start": 420.36,
+      "end": 421.84,
+      "text": "just making its initial mistakes."
+    },
+    {
+      "start": 421.84,
+      "end": 424.68,
+      "text": "And you can't just train it on historical data either"
+    },
+    {
+      "start": 424.68,
+      "end": 426.88,
+      "text": "because past data is frozen in time."
+    },
+    {
+      "start": 426.92,
+      "end": 430.4,
+      "text": "It won't react dynamically to the AI's hypothetical new trades."
+    },
+    {
+      "start": 430.4,
+      "end": 432.68,
+      "text": "Like the market impact wouldn't show up."
+    },
+    {
+      "start": 432.68,
+      "end": 435.88,
+      "text": "That is the exact paradox outlined in the survey."
+    },
+    {
+      "start": 435.88,
+      "end": 438.04,
+      "text": "The biggest roadblock is the total lack"
+    },
+    {
+      "start": 438.04,
+      "end": 439.48,
+      "text": "of high fidelity simulation."
+    },
+    {
+      "start": 439.48,
+      "end": 441.84,
+      "text": "So we just don't have good enough practice arenas."
+    },
+    {
+      "start": 441.84,
+      "end": 444.6,
+      "text": "Right. We don't have simulated environments"
+    },
+    {
+      "start": 444.6,
+      "end": 448.52,
+      "text": "that accurately model how real human traders"
+    },
+    {
+      "start": 448.52,
+      "end": 452.24,
+      "text": "and rival algorithms will react to an AI in real time."
+    },
+    {
+      "start": 452.24,
+      "end": 454.76,
+      "text": "The training ground simply isn't realistic enough."
+    },
+    {
+      "start": 454.76,
+      "end": 459.24,
+      "text": "Plus, severe market crashes are relatively rare, thankfully."
+    },
+    {
+      "start": 459.24,
+      "end": 462.12,
+      "text": "But even with terabytes of financial data generated every day,"
+    },
+    {
+      "start": 462.12,
+      "end": 464.4,
+      "text": "an AI hasn't experienced enough extreme events"
+    },
+    {
+      "start": 464.4,
+      "end": 467.28,
+      "text": "to know how to react when the sky is literally falling."
+    },
+    {
+      "start": 467.28,
+      "end": 469.16,
+      "text": "That's the data scarcity issue."
+    },
+    {
+      "start": 469.16,
+      "end": 470.84,
+      "text": "The everyday data is vast."
+    },
+    {
+      "start": 470.84,
+      "end": 474.56,
+      "text": "But data on extreme black swan scenarios is incredibly scarce."
+    },
+    {
+      "start": 474.56,
+      "end": 475.52,
+      "text": "So how do they fix it?"
+    },
+    {
+      "start": 475.52,
+      "end": 477.36,
+      "text": "Do they just keep building better simulators?"
+    },
+    {
+      "start": 477.36,
+      "end": 479.04,
+      "text": "Well, to overcome the data scarcity"
+    },
+    {
+      "start": 479.04,
+      "end": 480.96,
+      "text": "and the overall brutalness of these models,"
+    },
+    {
+      "start": 480.96,
+      "end": 482.64,
+      "text": "the field is exploring AutoML"
+    },
+    {
+      "start": 482.64,
+      "end": 486.08,
+      "text": "to help non-experts automate the tuning of the AI."
+    },
+    {
+      "start": 486.08,
+      "end": 488.72,
+      "text": "But the really radical frontier is alternative data."
+    },
+    {
+      "start": 488.72,
+      "end": 490.36,
+      "text": "Alternative data, like what?"
+    },
+    {
+      "start": 490.36,
+      "end": 493.68,
+      "text": "Researchers are feeding these agents non-financial inputs."
+    },
+    {
+      "start": 493.68,
+      "end": 496.44,
+      "text": "Thanks satellite imagery of retail parking lots"
+    },
+    {
+      "start": 496.44,
+      "end": 499.48,
+      "text": "or global Twitter sentiment or even microweather data."
+    },
+    {
+      "start": 499.48,
+      "end": 501.56,
+      "text": "Wait, whether data to trade stocks?"
+    },
+    {
+      "start": 501.56,
+      "end": 502.24,
+      "text": "Yeah."
+    },
+    {
+      "start": 502.24,
+      "end": 504.6,
+      "text": "So the agent builds a robust understanding"
+    },
+    {
+      "start": 504.6,
+      "end": 506.84,
+      "text": "of the actual physical world,"
+    },
+    {
+      "start": 506.84,
+      "end": 509.04,
+      "text": "not just abstract price charts on the screen."
+    },
+    {
+      "start": 509.04,
+      "end": 509.84,
+      "text": "Oh, wow."
+    },
+    {
+      "start": 509.84,
+      "end": 510.52,
+      "text": "OK, so milling."
+    },
+    {
+      "start": 510.52,
+      "end": 512.0,
+      "text": "Pulling this all together for you."
+    },
+    {
+      "start": 512.0,
+      "end": 515.08,
+      "text": "Even if you never touch a stock portfolio in your life,"
+    },
+    {
+      "start": 515.08,
+      "end": 517.76,
+      "text": "this exploration reveals a pretty profound lesson"
+    },
+    {
+      "start": 517.76,
+      "end": 520.12,
+      "text": "about navigating information overload."
+    },
+    {
+      "start": 520.12,
+      "end": 521.52,
+      "text": "It really applies to everything."
+    },
+    {
+      "start": 521.52,
+      "end": 522.0,
+      "text": "Right."
+    },
+    {
+      "start": 522.0,
+      "end": 525.08,
+      "text": "Success in a noisy world isn't about perfectly predicting"
+    },
+    {
+      "start": 525.08,
+      "end": 526.32,
+      "text": "what will happen next."
+    },
+    {
+      "start": 526.32,
+      "end": 528.12,
+      "text": "It's about building a flexible system"
+    },
+    {
+      "start": 528.12,
+      "end": 530.36,
+      "text": "that knows how to take the right action"
+    },
+    {
+      "start": 530.36,
+      "end": 532.28,
+      "text": "regardless of the chaos."
+    },
+    {
+      "start": 532.28,
+      "end": 533.76,
+      "text": "So what does this all mean?"
+    },
+    {
+      "start": 533.76,
+      "end": 538.28,
+      "text": "Where is this alternative data arms race actually heading?"
+    },
+    {
+      "start": 538.28,
+      "end": 539.6,
+      "text": "Well, it raises an important question,"
+    },
+    {
+      "start": 539.6,
+      "end": 541.48,
+      "text": "something deeply provocative"
+    },
+    {
+      "start": 541.48,
+      "end": 543.48,
+      "text": "that the source material really got me thinking about."
+    },
+    {
+      "start": 543.48,
+      "end": 544.6,
+      "text": "OK, lay it on us."
+    },
+    {
+      "start": 544.6,
+      "end": 546.64,
+      "text": "If future reinforcement learning agents"
+    },
+    {
+      "start": 546.64,
+      "end": 549.28,
+      "text": "are trained to execute high frequency trades"
+    },
+    {
+      "start": 549.28,
+      "end": 552.8,
+      "text": "based heavily on non-financial alternative data,"
+    },
+    {
+      "start": 552.8,
+      "end": 556.24,
+      "text": "like microweather anomalies or viral internet trends,"
+    },
+    {
+      "start": 556.24,
+      "end": 558.0,
+      "text": "could these competing algorithms eventually"
+    },
+    {
+      "start": 558.0,
+      "end": 562.04,
+      "text": "create a completely bizarre synthetic financial ecosystem?"
+    },
+    {
+      "start": 562.04,
+      "end": 562.88,
+      "text": "Oh, man."
+    },
+    {
+      "start": 562.88,
+      "end": 566.52,
+      "text": "An ecosystem where global stock prices fluctuate wildly"
+    },
+    {
+      "start": 566.52,
+      "end": 568.56,
+      "text": "just based on weather events or memes?"
+    },
+    {
+      "start": 568.56,
+      "end": 571.64,
+      "text": "Exactly, entirely divorced from a human logic"
+    },
+    {
+      "start": 571.64,
+      "end": 573.76,
+      "text": "or the actual value of a corporation,"
+    },
+    {
+      "start": 573.76,
+      "end": 577.12,
+      "text": "just machines reacting to alternative data at light skew."
+    },
+    {
+      "start": 577.12,
+      "end": 579.16,
+      "text": "A completely alien financial reality"
+    },
+    {
+      "start": 579.16,
+      "end": 580.24,
+      "text": "operating at the speed of light."
+    },
+    {
+      "start": 580.24,
+      "end": 580.96,
+      "text": "That is wild."
+    },
+    {
+      "start": 580.96,
+      "end": 583.12,
+      "text": "Melanie, keep questioning the systems around you."
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "source": "Predicting stocks with visibility graph geometry.mp3",
+  "method": "faster-whisper tiny.en; automatic, speaker attribution unverified",
+  "duration": 535.0,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.08,
+      "text": "Welcome to today's exploration melody."
+    },
+    {
+      "start": 2.08,
+      "end": 6.88,
+      "text": "I'm your host and joining me today is our resident expert to break all this down."
+    },
+    {
+      "start": 6.88,
+      "end": 9.12,
+      "text": "Hey Melanie. Yeah, it's great to be here."
+    },
+    {
+      "start": 9.12,
+      "end": 13.84,
+      "text": "I have to say I see your background has shifted from that, you know, that classic Wall Street"
+    },
+    {
+      "start": 13.84,
+      "end": 17.68,
+      "text": "ticker to this really cool glowing constellation of data notes."
+    },
+    {
+      "start": 17.68,
+      "end": 19.12,
+      "text": "I mean, I had to set the mood, right?"
+    },
+    {
+      "start": 19.12,
+      "end": 24.4,
+      "text": "It is absolutely perfect because today, Melanie, we are diving into a really cutting edge academic"
+    },
+    {
+      "start": 24.4,
+      "end": 30.56,
+      "text": "paper from May 2026. It is called the statistical significance of the inclusion of"
+    },
+    {
+      "start": 30.56,
+      "end": 35.6,
+      "text": "graph neural networks in the financial time series forecasting problem, which I know sounds like"
+    },
+    {
+      "start": 35.6,
+      "end": 41.44,
+      "text": "a mouthful. It really does. But the mission here is actually fascinating. We're trying to understand"
+    },
+    {
+      "start": 41.44,
+      "end": 48.48,
+      "text": "how researchers are tackling the stock market by stopping looking at time as a straight line."
+    },
+    {
+      "start": 48.48,
+      "end": 53.84,
+      "text": "Right. They're taking a chronological sequence and essentially turning it into a geometric shape."
+    },
+    {
+      "start": 53.84,
+      "end": 58.56,
+      "text": "And honestly, the crazy part about this research is that they seemingly solve the problem."
+    },
+    {
+      "start": 58.56,
+      "end": 64.0,
+      "text": "But in doing so, they sort of expose this massive flaw in how artificial intelligence is"
+    },
+    {
+      "start": 64.0,
+      "end": 69.76,
+      "text": "graded across the board. Yeah, it's a pretty wild twist. But to really grasp why we even need"
+    },
+    {
+      "start": 69.76,
+      "end": 76.72,
+      "text": "to turn time into geometry, we first have to look at why the current financial models are failing."
+    },
+    {
+      "start": 76.72,
+      "end": 81.92,
+      "text": "Because right now, the machine learning community relies on things like LSTMs, transformers,"
+    },
+    {
+      "start": 81.92,
+      "end": 88.08,
+      "text": "TCNs, right? Exactly. And even older statistical models like Arema. And all of these at their"
+    },
+    {
+      "start": 88.08,
+      "end": 93.12,
+      "text": "core are just highly advanced sequence trackers. Meaning they look at the data strictly chronological."
+    },
+    {
+      "start": 93.12,
+      "end": 98.16,
+      "text": "Right. They're hyper focused on those temporal patterns. Just looking at the events in a pure"
+    },
+    {
+      "start": 98.16,
+      "end": 103.44,
+      "text": "sequence. Okay. Let's unpack this because on the surface that makes total sense, time moves forward."
+    },
+    {
+      "start": 103.44,
+      "end": 109.44,
+      "text": "But relying only on those chronological patterns feels like trying to understand a movie by looking"
+    },
+    {
+      "start": 109.44,
+      "end": 114.8,
+      "text": "at a strip of film frame by frame through a tiny microscope. Oh, wow. Yeah. That's a really good"
+    },
+    {
+      "start": 114.8,
+      "end": 119.2,
+      "text": "way to put it. Right. Like you could absolutely see the immediate sequence of what's happening"
+    },
+    {
+      "start": 119.2,
+      "end": 125.12,
+      "text": "from one split second to the next. But you completely miss the broader landscape of the scene."
+    },
+    {
+      "start": 125.12,
+      "end": 129.04,
+      "text": "That is exactly it because financial markets are just incredibly noisy."
+    },
+    {
+      "start": 129.04,
+      "end": 133.84,
+      "text": "Academics call them stochastic, which is, you know, just the fancy structural way of saying"
+    },
+    {
+      "start": 133.84,
+      "end": 139.04,
+      "text": "they have a profound randomness to them. Which, I mean, is a very polite way of saying the"
+    },
+    {
+      "start": 139.12,
+      "end": 143.52,
+      "text": "stock market behaves like a squirrel trying to cross a busy highway. It's completely erratic."
+    },
+    {
+      "start": 143.52,
+      "end": 148.16,
+      "text": "Yeah. Totally unpredictable in the short term. So when you look at that squirrel's path, purely"
+    },
+    {
+      "start": 148.16,
+      "end": 153.36,
+      "text": "sequentially, you know, moving strictly from point A to point B to point C, you leave out all these"
+    },
+    {
+      "start": 153.36,
+      "end": 160.0,
+      "text": "massive hidden nonlinear relationships. Because the linear sequence just doesn't show you everything."
+    },
+    {
+      "start": 160.0,
+      "end": 166.32,
+      "text": "Right. It doesn't have the capacity to show how a data point from say three months ago might"
+    },
+    {
+      "start": 166.32,
+      "end": 171.6,
+      "text": "be interacting with the data point from yesterday. I get the metaphor. But logistically, I mean,"
+    },
+    {
+      "start": 171.6,
+      "end": 177.44,
+      "text": "time is a straight line. Yesterday happened. Then today happened. You can't literally stack Tuesday"
+    },
+    {
+      "start": 177.44,
+      "end": 182.56,
+      "text": "on top of Thursday. No, obviously not physically. So how are they getting a geometric shape out of"
+    },
+    {
+      "start": 182.56,
+      "end": 187.2,
+      "text": "a flat sequence of numbers? Okay. So they use this thing called the visibility graph algorithm."
+    },
+    {
+      "start": 187.2,
+      "end": 193.36,
+      "text": "Visibility graph. Got it. Imagine you plot daily stock prices as vertical bars on a standard"
+    },
+    {
+      "start": 193.36,
+      "end": 198.0,
+      "text": "bar chart, right? Okay. I'm picturing it. Just standard vertical bars. The algorithm basically"
+    },
+    {
+      "start": 198.0,
+      "end": 202.64,
+      "text": "asks you to draw a line from the top of one of those bars to the top of another, like connecting"
+    },
+    {
+      "start": 202.64,
+      "end": 210.24,
+      "text": "the dots. Kind of. But here's the catch. If they have a clear line of sight to each other,"
+    },
+    {
+      "start": 210.24,
+      "end": 214.8,
+      "text": "meaning there isn't a taller bar sitting between them and blocking the view. They become"
+    },
+    {
+      "start": 214.8,
+      "end": 219.44,
+      "text": "connected. Oh, wow. Yeah. They become connected nodes in a graph. Here's where it gets really"
+    },
+    {
+      "start": 219.44,
+      "end": 224.64,
+      "text": "interesting. Melanie just visualize that for a second. You are turning a standard stock chart"
+    },
+    {
+      "start": 224.64,
+      "end": 230.8,
+      "text": "into a literal skyline, a literal skyline exactly. And the data points are essentially looking at"
+    },
+    {
+      "start": 230.8,
+      "end": 236.72,
+      "text": "each other across time. If a high price from a year ago can see a high price today without any"
+    },
+    {
+      "start": 236.72,
+      "end": 242.0,
+      "text": "higher peaks in between, they're instantly linked. What's fascinating here is how this reveals"
+    },
+    {
+      "start": 242.0,
+      "end": 246.4,
+      "text": "the hidden nature of the data using network theory. How so? Well, depending on the market's"
+    },
+    {
+      "start": 246.4,
+      "end": 252.24,
+      "text": "behavior, the shape of that skyline changes entirely. So a time series that repeats reliably"
+    },
+    {
+      "start": 252.24,
+      "end": 257.6,
+      "text": "that turns into a regular graph. Okay. So it has structure. Right. And pure random noise,"
+    },
+    {
+      "start": 257.6,
+      "end": 262.32,
+      "text": "that translates into a random graph. Makes sense. But the really complex fractal patterns that"
+    },
+    {
+      "start": 262.32,
+      "end": 268.8,
+      "text": "we actually see in finance, those emerge as what network theory calls small world graphs."
+    },
+    {
+      "start": 268.8,
+      "end": 274.24,
+      "text": "That is so cool. But Melanie, you might be wondering how an AI actually processes this,"
+    },
+    {
+      "start": 274.32,
+      "end": 279.12,
+      "text": "because now we have two simultaneous realities. Yeah. It's a lot to process. Right. We have our"
+    },
+    {
+      "start": 279.12,
+      "end": 284.24,
+      "text": "chronological timeline. And we have this new geometric skyline. So do they just throw out the"
+    },
+    {
+      "start": 284.24,
+      "end": 290.64,
+      "text": "timeline entirely? Not at all. The paper proposes this architecture called the Time Geometric Model."
+    },
+    {
+      "start": 290.64,
+      "end": 294.96,
+      "text": "And it basically works in three parts. Okay. What a part. First, you have a time component"
+    },
+    {
+      "start": 294.96,
+      "end": 299.92,
+      "text": "which just uses standard neural networks to process that chronological sequence. So the old way is"
+    },
+    {
+      "start": 299.92,
+      "end": 305.2,
+      "text": "is still in there. Yes. Second, there's a geometric component. And this uses graph convolutional"
+    },
+    {
+      "start": 305.2,
+      "end": 311.52,
+      "text": "networks or GCN's to actually read that adjacency matrix from our visibility graph skyline."
+    },
+    {
+      "start": 311.52,
+      "end": 315.68,
+      "text": "So the sight lines we just built. Exactly. Yeah. And finally, there is a fully connected"
+    },
+    {
+      "start": 315.68,
+      "end": 321.2,
+      "text": "component that fuses those two outputs together into a single prediction. Wait, so we aren't throwing"
+    },
+    {
+      "start": 321.2,
+      "end": 325.76,
+      "text": "away the old timeline tools. We were essentially just forcing them to wear 3D glasses."
+    },
+    {
+      "start": 325.76,
+      "end": 331.36,
+      "text": "I love that. Yes. Exactly. But do these temporal and geometric components ever confuse each other"
+    },
+    {
+      "start": 331.36,
+      "end": 336.08,
+      "text": "or do they always perfectly align? Well, it's less about them confusing each other and more about"
+    },
+    {
+      "start": 336.08,
+      "end": 342.08,
+      "text": "the GCN actively aggregating information from neighboring nodes. Okay. So gathering data from the"
+    },
+    {
+      "start": 342.08,
+      "end": 347.68,
+      "text": "neighbors. Right. But remember, in our skyline, a neighbor isn't necessarily the data point that"
+    },
+    {
+      "start": 347.68,
+      "end": 352.96,
+      "text": "happened the very next day. Right. Because of the line of sight. Exactly. It's any point it can see."
+    },
+    {
+      "start": 353.04,
+      "end": 358.16,
+      "text": "So the model aggregates information from nodes that might be chronologically months apart,"
+    },
+    {
+      "start": 358.16,
+      "end": 363.76,
+      "text": "but they are geometrically connected by that line of sight, which I'm guessing helps it spot things"
+    },
+    {
+      "start": 363.76,
+      "end": 369.12,
+      "text": "it would normally miss. Completely. It helps the model spot these long distance fractal patterns"
+    },
+    {
+      "start": 369.12,
+      "end": 374.48,
+      "text": "that the standard temporal timeline is just totally blind to. Okay. Well, theory is great."
+    },
+    {
+      "start": 374.48,
+      "end": 379.28,
+      "text": "But let's see how this actually performs. The researchers tested this on 90 stocks from the"
+    },
+    {
+      "start": 379.28,
+      "end": 385.68,
+      "text": "the S&P 100, right? Yeah, 90 stocks. And they use daily data spanning from January 2015,"
+    },
+    {
+      "start": 385.68,
+      "end": 393.6,
+      "text": "all the way to June 2023. That is a massive chunk of data close open, high, low volume, all of it."
+    },
+    {
+      "start": 393.6,
+      "end": 398.96,
+      "text": "All of it. And they tested it across one day, five day and 20 day prediction horizons."
+    },
+    {
+      "start": 398.96,
+      "end": 403.92,
+      "text": "Okay. And earlier I mentioned a massive flaw in how AI is graded. This is where that comes in,"
+    },
+    {
+      "start": 403.92,
+      "end": 408.88,
+      "text": "isn't it? Yeah, this is the catch. So the time geometric model consistently improved upon the baseline"
+    },
+    {
+      "start": 409.36,
+      "end": 414.48,
+      "text": "adding that geometric skyline perspective actually worked. Awesome. But the researchers discovered"
+    },
+    {
+      "start": 414.48,
+      "end": 419.92,
+      "text": "something crucial. The statistical significance of those improvements changed wildly depending on"
+    },
+    {
+      "start": 419.92,
+      "end": 426.88,
+      "text": "the evaluation metric they used. Many things like RMSE, MAE, MAPE or MACE. Exactly. Depending on the"
+    },
+    {
+      "start": 426.88,
+      "end": 432.16,
+      "text": "metric and the forecasting horizon, the significance was all over the place. So what does this all mean?"
+    },
+    {
+      "start": 432.16,
+      "end": 437.2,
+      "text": "Does this imply the model only looks like a breakthrough if researchers cherry pick the exact"
+    },
+    {
+      "start": 437.92,
+      "end": 443.04,
+      "text": "grading rubric? This raises an important question, right? But the researchers were incredibly rigorous."
+    },
+    {
+      "start": 443.04,
+      "end": 447.76,
+      "text": "They didn't cherry pick. How do we know for sure? Because they ran multiple comparison tests,"
+    },
+    {
+      "start": 447.76,
+      "end": 454.72,
+      "text": "we are talking pair test tests, Wilcoxen, sign tests, Friedman, and Nemeni tests."
+    },
+    {
+      "start": 454.72,
+      "end": 459.04,
+      "text": "Okay. So they brought out the heavy statistical artillery to prove the gains weren't a fluke."
+    },
+    {
+      "start": 459.04,
+      "end": 464.16,
+      "text": "They absolutely did. But the paper's vital warning to the machine learning community is that AI"
+    },
+    {
+      "start": 464.16,
+      "end": 470.32,
+      "text": "evaluation is just not one size fits all. Right. The ruler you use literally changes the reality of"
+    },
+    {
+      "start": 470.32,
+      "end": 476.24,
+      "text": "your results. That is wild. Melanie, look at the journey we've just taken. We started with a flat,"
+    },
+    {
+      "start": 476.8,
+      "end": 483.28,
+      "text": "seemingly random sequence of numbers and transformed it into this vibrant, connected, small-world"
+    },
+    {
+      "start": 483.28,
+      "end": 488.96,
+      "text": "graph. It really is a complete shift in how we process data. And it makes you think when you are"
+    },
+    {
+      "start": 488.96,
+      "end": 493.44,
+      "text": "facing an overwhelming sequence of information in your own life or work, you know, maybe the"
+    },
+    {
+      "start": 493.44,
+      "end": 497.52,
+      "text": "solution isn't to look harder at the sequence. Right. Sometimes staring at the timeline just"
+    },
+    {
+      "start": 497.52,
+      "end": 502.8,
+      "text": "doesn't help. Exactly. The solution might be to change the geometry of how you view it entirely."
+    },
+    {
+      "start": 502.8,
+      "end": 506.88,
+      "text": "You have to look at what connects across the distance, not just what happens next."
+    },
+    {
+      "start": 506.88,
+      "end": 513.68,
+      "text": "Which leaves us with one final, lingering thought to chew on. If the visibility graph algorithm"
+    },
+    {
+      "start": 513.68,
+      "end": 518.88,
+      "text": "can reveal hidden structures in chaotic stock prices simply by determining which points,"
+    },
+    {
+      "start": 518.88,
+      "end": 523.76,
+      "text": "you know, to see each other across time. Yeah. Could this exact same line of site geometry be"
+    },
+    {
+      "start": 523.76,
+      "end": 529.28,
+      "text": "used to predict other seemingly random human behaviors? Like, could we use it to map the sudden"
+    },
+    {
+      "start": 529.28,
+      "end": 533.6,
+      "text": "spread of a viral social movement or even the shifting tides of global political trends? I mean,"
+    },
+    {
+      "start": 533.6,
+      "end": 534.8,
+      "text": "it's something to think about."
+    }
+  ]
+}

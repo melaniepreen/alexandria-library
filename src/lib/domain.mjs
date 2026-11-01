@@ -1,0 +1,7 @@
+import {z} from 'zod';
+export const requestSchema=z.object({paperId:z.string().min(1).max(100),minutes:z.number().int().min(5).max(25)});
+export const feedbackSchema=z.object({paperId:z.string().min(1).max(100),difficulty:z.number().int().min(1).max(5),usefulness:z.number().int().min(1).max(5)});
+export const transcriptSchema=z.object({title:z.string(),sourceId:z.string(),turns:z.array(z.object({host:z.enum(['Mira','Sol']),text:z.string().min(1).max(3500),evidence:z.string().min(1)})).min(10),quiz:z.array(z.object({question:z.string(),options:z.array(z.string()).length(3),answer:z.number().int().min(0).max(2),evidence:z.string()})).length(3),hypotheses:z.array(z.object({idea:z.string(),assumptions:z.string(),test:z.string()}))});
+export function recommendation(feedback=[]){const last=feedback.slice(-10);const avg=last.length?last.reduce((s,f)=>s+f.difficulty,0)/last.length:3;return {level:avg>=4?'gentle':avg<=2?'technical':'balanced',instruction:avg>=4?'Define terms, use analogies, slow down.':avg<=2?'Include equations, assumptions and evaluation details.':'Balance intuition and method.',samples:last.length,preferredPaperIds:last.filter(f=>f.usefulness>=4).map(f=>f.paperId).filter(Boolean),avoidPaperIds:last.filter(f=>f.usefulness<=2).map(f=>f.paperId).filter(Boolean)};}
+export function canonicalId(id){return id.replace(/^.*\/abs\//,'').replace(/v\d+$/,'');}
+export function endReached(current,duration){return Number.isFinite(duration)&&duration>0&&current>=duration-0.5;}

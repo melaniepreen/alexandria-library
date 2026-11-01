@@ -1,0 +1,12 @@
+# The Paper Familiar
+
+**Project name + description:** The Paper Familiar is a visual research listening library for researchers, students and curious independent learners. Academic papers are hard to keep up with, and reading lists often grow faster than available reading time. The app presents papers as books in a cozy library, with a wizard-cat guide, audio conversations, automatic transcripts, conceptual manga artwork and three-question comprehension checks.
+
+- [x] **Public GitHub repository:** [melaniepreen/paper-familiar](https://github.com/melaniepreen/paper-familiar). See [README.md](README.md) for local setup, optional audio restoration and cloud configuration.
+- [x] **What was built today — 1 November 2026:** An Astro bookshelf interface; five archival episode entries; transcript and quiz views; local PDF drafts; usefulness/difficulty feedback; generated conceptual manga and wizard-cat artwork; server routes, a database schema and a durable worker scaffold for generation, refresh and email. Existing recordings are supplied examples, not newly generated episodes. Live cloud/provider integrations remain unverified until credentials and services are configured.
+- [x] **Use of Codex:** Codex implemented and checked the listening-completion flow so that seeking to the end opens the same three-question quiz as finishing playback normally. It added a domain test for the last-half-second threshold and browser-checked the quiz and feedback flow. Codex also helped create and integrate the visual artwork and documented its prompts and limitations.
+- [ ] **App link, if deployed:** No public deployment is verified. To try locally, install Node 24, clone the repository, run `npm ci` and `npm run dev`, then open `http://localhost:4321`. Click a book to explore its transcript, source paper and quiz. Sample audio requires restoring the original recordings using the README instructions. `npm test` checks application rules and sample metadata; `npm run build` produces the Vercel build.
+
+## Current limits
+
+Local drafts and feedback are browser-specific. Cloud generation, email, timed refresh and private asset access need the documented Supabase, worker and provider configuration. Automatic transcripts and conceptual illustrations are not a scientific fact-check. The app is presently a single-owner prototype, not a finished multi-user service. No subscriptions were purchased and no new hosted deployment is included in this repository publication.

@@ -1,0 +1,627 @@
+{
+  "source": "Pricing European calls with Quantum Fourier Transform.mp3",
+  "method": "faster-whisper tiny.en; automatic, speaker attribution unverified",
+  "duration": 651.56,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.36,
+      "text": "Imagine having a futuristic microwave that can cook a Michelin star meal in exactly five seconds."
+    },
+    {
+      "start": 7.36,
+      "end": 12.8,
+      "text": "The catch is that you have to spend three uninterrupted hours perfectly slicing the raw ingredients"
+    },
+    {
+      "start": 12.8,
+      "end": 15.6,
+      "text": "with a laser scalpel just to fit them into the tray."
+    },
+    {
+      "start": 15.6,
+      "end": 20.08,
+      "text": "Yeah, that is exactly the paradox happening right now at the bleeding edge of Wall Street"
+    },
+    {
+      "start": 20.08,
+      "end": 23.76,
+      "text": "and Quantum Physics. It is really the ultimate computational bottleneck."
+    },
+    {
+      "start": 23.76,
+      "end": 27.52,
+      "text": "Right, because we had these algorithms that could completely revolutionize finance,"
+    },
+    {
+      "start": 28.16,
+      "end": 32.4,
+      "text": "but they are currently hand-coached by the physical reality of how we feed them data."
+    },
+    {
+      "start": 33.04,
+      "end": 37.6,
+      "text": "Anyway, welcome Melanie. Today, we have a custom exploration mapped out just for you."
+    },
+    {
+      "start": 37.6,
+      "end": 43.68,
+      "text": "We certainly do. We are tearing into a really mind-bending 2024 paper by Palm Ewan from"
+    },
+    {
+      "start": 43.68,
+      "end": 49.68,
+      "text": "front-hopper ITWM. Yeah, this title pricing of European calls with the Quantum Fourier Transform."
+    },
+    {
+      "start": 49.68,
+      "end": 54.16,
+      "text": "Our mission for you today, Melanie, is to decode how quantum computing is attempting to hack"
+    },
+    {
+      "start": 54.16,
+      "end": 58.0,
+      "text": "one of finance's most expensive challenges, which is pricing derivatives."
+    },
+    {
+      "start": 58.0,
+      "end": 62.72,
+      "text": "And, you know, we want to figure out why an unexpected pivot in the math might be the exact key"
+    },
+    {
+      "start": 62.72,
+      "end": 68.16,
+      "text": "to bypassing our current hardware limits. Because, I mean, while we have closed mathematical"
+    },
+    {
+      "start": 68.16,
+      "end": 73.2,
+      "text": "formulas for very simple market models, the real financial world is incredibly messy, right?"
+    },
+    {
+      "start": 73.2,
+      "end": 78.72,
+      "text": "Exactly. To capture that messiness, we need highly complex models. And computing those models"
+    },
+    {
+      "start": 78.72,
+      "end": 84.0,
+      "text": "quickly enough to actually be useful is just a monstrously difficult billion dollar math problem."
+    },
+    {
+      "start": 84.0,
+      "end": 89.04,
+      "text": "Okay, let's unpack this. Melanie, you probably already know the basics of a European call option."
+    },
+    {
+      "start": 89.04,
+      "end": 94.24,
+      "text": "It is essentially a contract paying out the difference between a set-strike price"
+    },
+    {
+      "start": 94.24,
+      "end": 99.36,
+      "text": "and an asset's actual value at maturity. But only if that difference is positive."
+    },
+    {
+      "start": 99.36,
+      "end": 103.68,
+      "text": "Right, it is like a safety net sports bet. You only win if your team beats the point spread,"
+    },
+    {
+      "start": 103.68,
+      "end": 108.64,
+      "text": "but you lose absolutely nothing if they don't. I love that analogy. Now, to find the fair price"
+    },
+    {
+      "start": 108.64,
+      "end": 113.84,
+      "text": "of that contract today, the industry standard is running classical Monte Carlo simulations."
+    },
+    {
+      "start": 113.84,
+      "end": 119.44,
+      "text": "They essentially brute force millions of random future paths for the stock and just average them out."
+    },
+    {
+      "start": 119.44,
+      "end": 124.24,
+      "text": "Which works, you know, but it is computationally exhausting. And that really explains the"
+    },
+    {
+      "start": 124.24,
+      "end": 129.92,
+      "text": "massive push toward quantum computers in this space. Right. And the early quantum attempts at this,"
+    },
+    {
+      "start": 129.92,
+      "end": 136.08,
+      "text": "basically trying to copy that exact Monte Carlo process using a technique called amplitude estimation."
+    },
+    {
+      "start": 136.08,
+      "end": 140.88,
+      "text": "But here's my question. Yeah, go for it. If quantum computers are so insanely powerful,"
+    },
+    {
+      "start": 140.88,
+      "end": 145.68,
+      "text": "why isn't that mimicking method dominating the market already? Like, why does the hardware noise"
+    },
+    {
+      "start": 145.68,
+      "end": 152.24,
+      "text": "completely derail it? Well, it is because we are stuck in what physicists call the NICU era,"
+    },
+    {
+      "start": 152.24,
+      "end": 158.0,
+      "text": "which stands for noisy intermediate scale quantum. The qubits, the basic units of quantum"
+    },
+    {
+      "start": 158.0,
+      "end": 162.48,
+      "text": "information are just incredibly delicate right now. Oh, so they just fall apart easily. Exactly."
+    },
+    {
+      "start": 162.56,
+      "end": 169.2,
+      "text": "The amplitude estimation method requires these extremely long, complex sequences of operations."
+    },
+    {
+      "start": 169.2,
+      "end": 174.48,
+      "text": "And in an NI skew device, the physical noise corrupts the qubits before that long calculation can"
+    },
+    {
+      "start": 174.48,
+      "end": 179.68,
+      "text": "even finish. You mean noise like sound waves? Uh, no, more like slight temperature fluctuations or"
+    },
+    {
+      "start": 179.68,
+      "end": 185.28,
+      "text": "electromagnetic interference. The signal basically just dies. Wow. So mimicking classical brute force"
+    },
+    {
+      "start": 185.28,
+      "end": 190.0,
+      "text": "totally fails because the hardware just isn't stable enough yet. Yeah. And I guess that brings"
+    },
+    {
+      "start": 190.0,
+      "end": 194.64,
+      "text": "us right to you in paper. Yeah, he basically argues that we should abandon the Monte Carlo"
+    },
+    {
+      "start": 194.64,
+      "end": 200.56,
+      "text": "approach entirely. He's just using a totally different mathematical pathway, specifically the"
+    },
+    {
+      "start": 200.56,
+      "end": 206.72,
+      "text": "quantum Fourier transform or QFT. But I have to say, the paper gets incredibly dense right here."
+    },
+    {
+      "start": 207.52,
+      "end": 212.4,
+      "text": "It talks about approximating the option price using the characteristic function of the"
+    },
+    {
+      "start": 212.4,
+      "end": 217.28,
+      "text": "asset's log price. Right. Which sounds like a lot of jargon. It really does. What does that"
+    },
+    {
+      "start": 217.28,
+      "end": 221.76,
+      "text": "actually mean in plain English? Well, think of it this way. Tracking a stock price directly is"
+    },
+    {
+      "start": 221.76,
+      "end": 227.44,
+      "text": "like tracking a chaotic messy series of data points, right? But the characteristic function"
+    },
+    {
+      "start": 227.44,
+      "end": 233.2,
+      "text": "takes that messy financial data and translates it into waves or frequencies. Oh, okay. So is"
+    },
+    {
+      "start": 233.2,
+      "end": 237.76,
+      "text": "looking at the overall pattern instead of the individual jumps exactly. It tells us about the"
+    },
+    {
+      "start": 237.76,
+      "end": 242.88,
+      "text": "underlying probabilities of how that price moves. And it is a brilliant pivot because quantum"
+    },
+    {
+      "start": 242.88,
+      "end": 247.04,
+      "text": "computers naturally speak the language of waves. Oh, I see. So if Monte Carlo is trying to"
+    },
+    {
+      "start": 247.04,
+      "end": 251.92,
+      "text": "guess a song by playing millions of random notes until it sounds right, the quantum Fourier"
+    },
+    {
+      "start": 251.92,
+      "end": 257.2,
+      "text": "transform instantly looks at the sheet music and extracts the underlying chords. That is a perfect"
+    },
+    {
+      "start": 257.2,
+      "end": 261.6,
+      "text": "way to put it. Yeah. It just bypasses all that random guessing. That makes total sense. Yeah. But"
+    },
+    {
+      "start": 262.32,
+      "end": 267.52,
+      "text": "the paper also heavily emphasizes this dampening factor, which it calls alpha. It says the math"
+    },
+    {
+      "start": 267.52,
+      "end": 272.64,
+      "text": "involves an infinite integral that would normally just blow up to infinity. Right. Which is a big"
+    },
+    {
+      "start": 272.64,
+      "end": 277.84,
+      "text": "problem in math. So to make the math square integrable, which is really just the fancy mathematical"
+    },
+    {
+      "start": 277.84,
+      "end": 282.24,
+      "text": "way of saying preventing the numbers from exploding, they apply this dampening factor. So it"
+    },
+    {
+      "start": 282.24,
+      "end": 288.08,
+      "text": "asks like a mathematical shock absorber basically precisely. It squashes those extreme infinite outliers."
+    },
+    {
+      "start": 288.08,
+      "end": 293.76,
+      "text": "So the quantum computer can actually digest the core data without just crashing immediately."
+    },
+    {
+      "start": 293.76,
+      "end": 298.88,
+      "text": "Here's where it gets really interesting because I am genuinely stuck on something here."
+    },
+    {
+      "start": 298.96,
+      "end": 305.12,
+      "text": "What is that? My everyday laptop can run a classical fast Fourier transform and FFT"
+    },
+    {
+      "start": 306.0,
+      "end": 311.76,
+      "text": "in literal milliseconds. I mean, it is a decades old algorithm. Yeah, it is super common. Right."
+    },
+    {
+      "start": 311.76,
+      "end": 317.12,
+      "text": "So why go through the agony of building a billion dollar quantum computer just to do a Fourier"
+    },
+    {
+      "start": 317.12,
+      "end": 321.92,
+      "text": "transform? What am I missing here? Is this just massive over engineering? What's fascinating here"
+    },
+    {
+      "start": 321.92,
+      "end": 327.44,
+      "text": "is the sheer theoretical efficiency of the quantum version over the classical one. I mean,"
+    },
+    {
+      "start": 327.44,
+      "end": 333.12,
+      "text": "the classical FFT is fast for normal data. Sure. Not for this. No. When dealing with the vast"
+    },
+    {
+      "start": 333.12,
+      "end": 338.16,
+      "text": "complexity of financial modeling, the classical calculations still get deeply bogged down."
+    },
+    {
+      "start": 338.16,
+      "end": 345.12,
+      "text": "The QFT effectively turns a massive sequential chain of classical calculations into a single"
+    },
+    {
+      "start": 345.12,
+      "end": 351.12,
+      "text": "streamlined quantum state preparation. Wait, really? So it does it all at once? Yeah, you manipulate"
+    },
+    {
+      "start": 351.12,
+      "end": 356.0,
+      "text": "the probabilities of the quantum states directly. So you are evaluating all those underlying"
+    },
+    {
+      "start": 356.0,
+      "end": 361.28,
+      "text": "frequencies simultaneously instead of one by one. Wow. Okay. So theoretically, it is an absolute"
+    },
+    {
+      "start": 361.28,
+      "end": 368.0,
+      "text": "powerhouse. But you and actually tests this QFT method head to head against current industry favorites,"
+    },
+    {
+      "start": 368.0,
+      "end": 372.48,
+      "text": "right? He does. He tests it against things like the Quiskit finance library and conditional"
+    },
+    {
+      "start": 372.48,
+      "end": 377.36,
+      "text": "parameterized quantum circuits or CPQC. And the results actually present a really counterintuitive"
+    },
+    {
+      "start": 377.36,
+      "end": 382.16,
+      "text": "paradox, which blew my mind a little bit. Yeah, it is surprising. The paper reveals that the QFT"
+    },
+    {
+      "start": 382.16,
+      "end": 385.84,
+      "text": "approach actually has worse scaling when it comes to circuit depth, which means what"
+    },
+    {
+      "start": 385.84,
+      "end": 392.16,
+      "text": "exactly it means as you add more qubits to the system to handle bigger financial problems,"
+    },
+    {
+      "start": 392.16,
+      "end": 397.68,
+      "text": "the number of operations the QFT needs actually grows faster than the competing methods,"
+    },
+    {
+      "start": 397.68,
+      "end": 402.32,
+      "text": "which sounds terrible on paper. It does like buying a race car that has a slower top speed than"
+    },
+    {
+      "start": 402.32,
+      "end": 408.8,
+      "text": "its rifles. Exactly. But the twist is that the QFT car gets such incredible gas mileage that it"
+    },
+    {
+      "start": 408.8,
+      "end": 414.0,
+      "text": "wins the cross country race anyway. Right. It heavily outperforms the others because it requires"
+    },
+    {
+      "start": 414.0,
+      "end": 419.68,
+      "text": "far fewer qubits to achieve high accuracy in the first place. Plus, you can compute prices for"
+    },
+    {
+      "start": 419.68,
+      "end": 426.24,
+      "text": "multiple strike prices using just one single circuit, which is a huge advantage. That is incredible."
+    },
+    {
+      "start": 426.24,
+      "end": 430.8,
+      "text": "And I imagine high precision is basically everything in finance, right? Oh, absolutely. And that"
+    },
+    {
+      "start": 430.8,
+      "end": 436.32,
+      "text": "is a key point because the competing Quiskit finance Monte Carlo implementation actually shows"
+    },
+    {
+      "start": 436.32,
+      "end": 442.0,
+      "text": "a systematic bias. It drifts away from the true price. Wait, why does it drift? Because that"
+    },
+    {
+      "start": 442.08,
+      "end": 446.88,
+      "text": "specific implementation relies on an approximation circuit that inherently limits the resolution"
+    },
+    {
+      "start": 446.88,
+      "end": 451.36,
+      "text": "of the probability distribution. So it cuts corners to fit on the current quantum hardware."
+    },
+    {
+      "start": 451.36,
+      "end": 458.0,
+      "text": "Exactly. And those cut corners compound into a mathematical bias. But the QFT approach, on the"
+    },
+    {
+      "start": 458.0,
+      "end": 463.36,
+      "text": "other hand, analytically maps the exact characteristic function onto the quantum states."
+    },
+    {
+      "start": 463.36,
+      "end": 469.44,
+      "text": "Meaning it converges on the true mathematically fair price. Right. And a biased pricing model"
+    },
+    {
+      "start": 469.44,
+      "end": 474.24,
+      "text": "in finance is just a complete disaster. It means you are structurally guaranteed to lose money"
+    },
+    {
+      "start": 474.24,
+      "end": 480.64,
+      "text": "on your trades. Yeah, nobody wants to systematically hemorrhage money. But if this QFT approaches"
+    },
+    {
+      "start": 480.64,
+      "end": 486.24,
+      "text": "mathematically perfect and bias void, why aren't hedge funds using it to mint billions right now?"
+    },
+    {
+      "start": 486.8,
+      "end": 491.04,
+      "text": "Well, that brings us crashing back down to the physical hardware limitations we talked about"
+    },
+    {
+      "start": 491.04,
+      "end": 495.84,
+      "text": "earlier. Error propagation is basically the ultimate enemy here. Right. Though the paper does map"
+    },
+    {
+      "start": 495.84,
+      "end": 500.4,
+      "text": "out a sweet spot to minimize that error, doesn't it? It does. If you are pricing an option where"
+    },
+    {
+      "start": 500.4,
+      "end": 505.76,
+      "text": "the strike price isn't too far from the assets current value, you want to set that dampening factor"
+    },
+    {
+      "start": 505.76,
+      "end": 511.12,
+      "text": "shock absorber at the alpha to about 2.5. Okay, but even hitting that optimal sweet spot, the hard"
+    },
+    {
+      "start": 511.12,
+      "end": 516.32,
+      "text": "truth is pretty severe. It really is. You wouldn't calculate that to get an approximation"
+    },
+    {
+      "start": 516.32,
+      "end": 522.24,
+      "text": "accurate to just two decimal places, meaning calculating down to the penny, the quantum hardware"
+    },
+    {
+      "start": 522.24,
+      "end": 529.44,
+      "text": "must have an error rate below 0.002, which is an incredibly low margin of error. Yeah, current"
+    },
+    {
+      "start": 529.44,
+      "end": 533.84,
+      "text": "NICU devices can't hit that can they? They're not even close and that brings us right back to"
+    },
+    {
+      "start": 533.84,
+      "end": 538.4,
+      "text": "your microwave analogy at the start of our exploration. Ah, right. The ultimate bottleneck is the"
+    },
+    {
+      "start": 538.4,
+      "end": 543.92,
+      "text": "state preparation. Exactly. Getting the complex financial data translated into a quantum state so the"
+    },
+    {
+      "start": 543.92,
+      "end": 549.2,
+      "text": "QFT can even run is incredibly expensive computationally. It basically completely counteracts"
+    },
+    {
+      "start": 549.2,
+      "end": 553.76,
+      "text": "the speed up of the algorithm itself. So what does this all mean? We have this lightning-fast"
+    },
+    {
+      "start": 553.76,
+      "end": 559.6,
+      "text": "quantum engine, but it literally takes hours to load the fuel. If we connect this to the bigger"
+    },
+    {
+      "start": 559.6,
+      "end": 564.64,
+      "text": "picture, it perfectly encapsulates the current paradox of quantum computing. Oh, so well, we"
+    },
+    {
+      "start": 564.64,
+      "end": 569.52,
+      "text": "possess these brilliant paradigm shifting software algorithm is just sitting on the shelf,"
+    },
+    {
+      "start": 569.52,
+      "end": 573.92,
+      "text": "but they're essentially waiting for physical hardware and data loading techniques to catch up."
+    },
+    {
+      "start": 573.92,
+      "end": 579.12,
+      "text": "So Melanie, why does this matter to you today, especially if the hardware can't even run it"
+    },
+    {
+      "start": 579.12,
+      "end": 584.56,
+      "text": "yet? It is a great question. Well, it is because Wall Street is essentially acting as the ultimate"
+    },
+    {
+      "start": 584.56,
+      "end": 590.96,
+      "text": "hyperfunded stress test for quantum mechanics. The mathematical tools being forged right now to"
+    },
+    {
+      "start": 590.96,
+      "end": 595.92,
+      "text": "price these financial options are laying the groundwork for everything. Right. These dampening"
+    },
+    {
+      "start": 595.92,
+      "end": 601.52,
+      "text": "factors, these QFT mappings, they are the exact same frameworks that will likely solve wildly"
+    },
+    {
+      "start": 602.48,
+      "end": 606.88,
+      "text": "complex problems in physics, chemistry, and even global logistics. Exactly. It is all connected."
+    },
+    {
+      "start": 606.88,
+      "end": 610.56,
+      "text": "This raises an important question, though, drawn directly from the paper's conclusion."
+    },
+    {
+      "start": 610.56,
+      "end": 614.72,
+      "text": "Oh, what is that? Well, you and notes that we currently do not know of an efficient way to"
+    },
+    {
+      "start": 614.72,
+      "end": 620.0,
+      "text": "prepare these quantum states. We are still manually slicing the data with a laser scalpel, so to"
+    },
+    {
+      "start": 620.0,
+      "end": 625.04,
+      "text": "speak. Right. But what if there is a hidden inherent structure in the financial data itself"
+    },
+    {
+      "start": 625.04,
+      "end": 628.48,
+      "text": "that we just haven't discovered yet? Wait, look, a hidden pattern in the chaos."
+    },
+    {
+      "start": 628.48,
+      "end": 634.56,
+      "text": "Exactly. What if the seemingly chaotic random nature of the stock market actually contains a"
+    },
+    {
+      "start": 634.56,
+      "end": 641.28,
+      "text": "perfect elegant geometric structure when viewed through a quantum lens? Wow. If someone can find"
+    },
+    {
+      "start": 641.28,
+      "end": 646.0,
+      "text": "that hidden structure, we don't just solve a billion dollar math problem. We completely redefine"
+    },
+    {
+      "start": 646.0,
+      "end": 650.96,
+      "text": "how we understand the architecture of the entire financial world. Now, that is something to think about"
+    }
+  ]
+}

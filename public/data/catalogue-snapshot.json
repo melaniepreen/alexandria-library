@@ -1,0 +1,140 @@
+{
+  "checkedAt": "2026-11-01T15:18:24Z",
+  "papers": [
+    {
+      "id": "2610.40404",
+      "title": "Exponential Convergence of the Lifted Gradient Flow of the Bass Functional",
+      "abstract": "We establish multidimensional exponential convergence of the lifted Bass gradient flow in martingale optimal transport. Let $\u03bc\\le_{cx}\u03bd$ be an irreducible pair, with compact convex target support, source support strictly inside the target support, and target density bounded above and bounded away from zero almost everywhere on its interior. For every bounded $\u03c3(X)$-measurable initial state, the flow converges exponentially in $L^2$ to the global minimizer with the prescribed mean, and the functional value gap decays exponentially. Both bounds hold at every nonnegative time with the exact initial errors as prefactors. The quantitative step is strong convexity on sets with a common $L^\\infty$ bound and a fixed mean. We prove it by interpolating entropic endpoint potentials, using two conditional copies to cancel the unknown potential increment, and obtaining a Hessian lower bound uniform in the regularization parameter. Removing the regularization yields curvature for the original functional; the known qualitative theory supplies a common bound for the orbit. This extends the one-dimensional exponential-convergence result of Backhoff-Veraguas, Pammer, and Schachermayer. The main result is formalized in Lean 4. AI was used in preparing the paper (see Section 8).",
+      "authors": "Danila Litvinov",
+      "published": "2026-10-29T16:36:32Z",
+      "url": "https://arxiv.org/abs/2610.40404",
+      "shelf": "finance"
+    },
+    {
+      "id": "2610.40366",
+      "title": "Comparing tail forecasts: the number of exceedances is the sample size",
+      "abstract": "When two forecasts of a tail, such as prediction intervals at high coverage, extreme quantiles or expected shortfall (ES), are compared by a consistent score, the score difference is known in advance except on the days on which the outcome falls beyond a forecast. The number of these exceedances, not the number of observations, is the effective sample size. For intervals at miscoverage level $\u03b1$, the number of observations a comparison needs grows like $1/\u03b1$ while the number of exceedances it needs does not, and for some pairs of forecasts no test can do better. A confidence sequence that is valid at all times and needs no distributional assumption attains this rate; Hoeffding-type procedures, calibrated by the range of the score difference, need $1/\u03b1$ times more. When exceedances are scarce, the Diebold-Mariano test declares the less conservative forecaster better with at least, asymptotically, the probability of observing no exceedance, whichever forecaster is actually better; the usual small-sample corrections do not remove this, while a bootstrap-t version largely does. For (value-at-risk, ES) forecasts, a less conservative ES can be shown without assumptions to be worse on the days on which it is less conservative, but never to be better without an assumption on the loss tail. In 250-day windows of 97.5% forecasts for seven stock indices, 18.4% of significant Diebold-Mariano results favouring the less conservative model contradict the ranking on the remaining days, against 6.9% of those favouring the more conservative one.",
+      "authors": "Raphael Coelho",
+      "published": "2026-10-29T16:17:30Z",
+      "url": "https://arxiv.org/abs/2610.40366",
+      "shelf": "finance"
+    },
+    {
+      "id": "2610.40129",
+      "title": "The Generalised Kessler Syndrome and the Persian Gulf",
+      "abstract": "The term Kessler syndrome was coined for a runaway orbital cascade creating a high-density debris field. The idea is generalised and applied to supply chains. An additive channel enables failures to generate further failures; a subtractive channel erodes the capacity to contain and restore. When damage outpaces repair, failure becomes irreversible and the system settles into a new state. Supplies connect the theory to its application. Stocks insulate subsystems from one another, and their exhaustion exposes dependencies. For the Persian Gulf states, restrictions on maritime supplies from spring 2026 are inadequately compensated by air and road transport alternatives. This depletes inventories unevenly across products and impairs the functioning of the logistics system itself. Throughput optimisation builds fragility everywhere; the Gulf is where it is becoming visible, with the Strait of Hormuz restriction as the trigger. Formulated as a Kelly portfolio allocation under a weakest-link payoff, the optimal strategy concentrates resources on the lagging rather than the leading inputs.",
+      "authors": "Bernhard K Meister",
+      "published": "2026-10-29T14:21:42Z",
+      "url": "https://arxiv.org/abs/2610.40129",
+      "shelf": "finance"
+    },
+    {
+      "id": "2610.39896",
+      "title": "Strong rate for one-dimensional driftless continuous strict local martingales",
+      "abstract": "For one-dimensional strict local martingales of the form $\\mathrm{d} X_t=\u03c3(X_t) \\mathrm{d} W_t$ starting from $X_{0}=x_{0}>0$, we prove the strong rate $\\mathbb{E}\\left[|X^h_N-X_T|\\right] \\lesssim h^{\\min\\{\u03b8\u03b1,\\frac{1}{2}\\}}$ for a discrete scheme~$X^h$ truncated at a level $h^{-\u03b1}$, with time step~$h$, as $h\\downarrow 0$, where~$\u03b8$ depends on the truncation property. For the CEV model $\u03c3(x)\\equiv x^{1+\u03b3}$ in particular, the rate is~$\\frac{1}{2}$ for any $\u03b3\\in (0,1)$ (up to a logarithmic pre-factor at $\u03b3=\\frac{1}{2}$).",
+      "authors": "Antoine Jacquier",
+      "published": "2026-10-29T12:07:27Z",
+      "url": "https://arxiv.org/abs/2610.39896",
+      "shelf": "finance"
+    },
+    {
+      "id": "2610.39636",
+      "title": "Information Flow and Market Risk: Transformer-Based Evidence on Sentiment and Volatility Dynamics",
+      "abstract": "This study examines whether transformer-based financial news sentiment improves equity volatility forecasts beyond conventional market-based predictors. Using data for eleven US stocks, we compare volatility persistence models with specifications incorporating the VIX, AAII investor sentiment, and news sentiment extracted using ModernFinBERT. The forecasting target is annualized volatility constructed from future averages of trailing 252-session Yang-Zhang estimates, evaluated at horizons of 1, 5, and 22 trading days. Models are assessed through walk-forward testing with expanding and rolling estimation windows, fixed initial hyperparameter selection, and statistical comparisons accounting for multiple testing and serial dependence. Results show that a naive persistence benchmark achieves the lowest average QLIKE loss at all horizons. Although HAR-VIX produces the largest number of individual forecasting wins under expanding windows, it does not achieve the lowest mean loss. Adding text-based sentiment improves HAR forecasts in only two of 33 expanding-window comparisons, and neither improvement remains statistically significant under longer HAC bandwidths. A blinded audit of 2,700 news texts further characterizes the agreement and confidence patterns of ModernFinBERT classifications. The findings do not establish a general incremental forecasting advantage from transformer-based news sentiment. They highlight the importance of strong benchmarks, temporal alignment, robust inference, and careful evaluation of text-derived predictors.",
+      "authors": "Szymon Lis, Robert \u015alepaczuk, Pawe\u0142 Sakowski",
+      "published": "2026-10-29T08:57:51Z",
+      "url": "https://arxiv.org/abs/2610.39636",
+      "shelf": "finance"
+    },
+    {
+      "id": "2610.40652",
+      "title": "Reconstructing hidden observables via quantum snapshot thermometry",
+      "abstract": "Projective snapshots are a standard readout tool for quantum simulators, but they directly probe only observables that are diagonal in the measurement basis. We show how local equilibration and an independently calibrated equilibrium equation of state can reveal otherwise hidden conserved-density profiles. We demonstrate numerically that such ``quantum snapshot thermometry'' can recover energy fronts and a diffusion constant, distinguish spin transport from energy spreading, and reveal conserved-charge profiles invisible in the initial measurements. We also identify symmetry-imposed ambiguities in the readout and show how prior knowledge of the spatial structure can resolve them. Fixed-basis snapshot thermometry thus provides quantitative hydrodynamic information beyond transport exponents, bypassing additional measurement bases and quantum state tomography.",
+      "authors": "Jie Ren, Andrew Hallam, Luheng Zhao, Huanqian Loh, Zlatko Papi\u0107",
+      "published": "2026-10-29T17:59:38Z",
+      "url": "https://arxiv.org/abs/2610.40652",
+      "shelf": "quantum"
+    },
+    {
+      "id": "2610.40651",
+      "title": "Renormalization for Robust Memory without Synchronization",
+      "abstract": "Local error correction can preserve classical information against noise, but protection under synchronized updates need not survive when sites evolve at independent random times. Establishing stability is particularly challenging when protection relies on the collective action of competing local rules. Here we develop a spacetime renormalization framework that reveals how independently acting local updates can collectively stabilize memory. We identify sufficient conditions under which the geometry of stable interfaces and suppression of defect propagation produce reliable erosion at large scales. Applying this framework, we prove stability of the asynchronous \\textsf{R} squeezing code and introduce robust processes in two and three dimensions. In these systems, both encoded phases persist under sufficiently weak noise, even when the noise favors one phase. Our results provide a criterion for designing autonomous memories sustained by competing local stochastic dynamics.",
+      "authors": "Shashwat Chakraborty, Jong Yeon Lee",
+      "published": "2026-10-29T17:59:33Z",
+      "url": "https://arxiv.org/abs/2610.40651",
+      "shelf": "quantum"
+    },
+    {
+      "id": "2610.40642",
+      "title": "Comparison of entangling strategies for unitary synthesis",
+      "abstract": "Trapped-ion quantum computers are promising as a platform for realizing quantum computational advantage. They promise long coherence times, near all-to-all connectivity, and potential multiqubit gates as distinguishing advantages compared to competing platforms. Regarding these advantages, it is crucial to understand the trade-offs between increasing engineering complexity and actual improvements in running quantum algorithms with a more flexible gate set. In this work, we investigate this question and develop a versatile toolset to evaluate the performance of gate sets composed of native M\u00f8lmer--S\u00f8rensen multiqubit gates. To this end, we employ unitary synthesis as an application-agnostic benchmark target and identify specific hardware requirements for multiqubit gates to be advantageous.",
+      "authors": "Jonas Wunder, Hendrik Weimer, Ricardo Costa de Almeida",
+      "published": "2026-10-29T17:58:57Z",
+      "url": "https://arxiv.org/abs/2610.40642",
+      "shelf": "quantum"
+    },
+    {
+      "id": "2610.40638",
+      "title": "Entanglement diagnostics of stochastic-resetting steady states: theory and measurement on superconducting qubits",
+      "abstract": "Stochastic resetting drives quantum systems into nonequilibrium stationary states unreachable under uninterrupted unitary evolution, and their entanglement depends on whether the reset history is resolved or averaged over. We study this interplay in the transverse-field Ising chain, deriving closed-form results for two qubits and evaluating chains of up to 12 qubits exactly. In the two-qubit system, these closed-form results show that phase matching between energy eigenstates produces resonances, and their visibility in the stationary state is determined by the symmetry of the reset state. Measurements on an IBM superconducting processor show the entropies evaluated before and after the reset average closely following noiseless predictions with no fitted parameter, while concurrence lies below prediction across most of the hardware measurements. The two diagnostics respond differently because they read different components of the same reconstructed state, and a depolarizing model captures the concurrence suppression with one fitted parameter. The difference between the two entropies, i. e., the Jensen gap of entanglement entropy, equals the Holevo information that a subsystem retains about the time since the last reset. With a Bell-state reset, this information grows with chain length across a half-chain cut over the sizes studied, without visible saturation at the smaller reset probabilities. Since reset times are sampled and recorded classically, the trajectory-averaged entropy, and with it the Jensen gap, is obtained without postselection, in contrast to monitored circuits, where trajectory-resolved entanglement requires sampling exponentially rare measurement records.",
+      "authors": "Jakob Murauer, Sabine Tornow, Manas Kulkarni, Eli Barkai, Satya N. Majumdar, Monalisa Singh Roy",
+      "published": "2026-10-29T17:58:29Z",
+      "url": "https://arxiv.org/abs/2610.40638",
+      "shelf": "quantum"
+    },
+    {
+      "id": "2610.40628",
+      "title": "Locality in Dissipative Ground-State Preparation",
+      "abstract": "Can the ground state of a local Hamiltonian be prepared by local dissipation? We address this question for free-fermion Hamiltonians, using a quadratic Lindbladian with linear jump operators for the dissipative ground-state preparation. For translation-invariant targets, Fourier correspondence relates spatial locality to momentum-space analyticity, allowing us to derive a complete spectral criterion for the existence of exponentially local linear jump operators that prepare the ground state. This criterion leads to a no-go theorem that, sign-changing Fermi-level crossings exclude exponentially local linear jump operators for preparing the ground state. While these crossings are the complete obstruction in one dimension, additional obstructions generally arise in higher dimensions. We illustrate these additional obstructions using two quadratic-band-touching models with algebraically decaying ground-state correlations. We further show that short-range ground-state correlations, although not necessary, are sufficient for local dissipative preparation even without translation invariance. Our results establish how the spectral structure of the target Hamiltonian governs the locality of dissipative ground-state preparation.",
+      "authors": "Qicheng Tang, Ruhanshi Barad, Xueda Wen",
+      "published": "2026-10-29T17:56:55Z",
+      "url": "https://arxiv.org/abs/2610.40628",
+      "shelf": "quantum"
+    },
+    {
+      "id": "2610.40624",
+      "title": "Left-Handed Transmission Lines for the Dynamical Casimir Effect",
+      "abstract": "Left-handed (LH) superconducting transmission lines, built with series capacitors and shunt inductors instead of the series inductors and shunt capacitors of a conventional right-handed (RH) line, have a spectrum with a nonzero lower band edge and modes that become sparse at high frequencies. We study the dynamical Casimir effect in a LH line terminated by a flux-modulated SQUID and compare it with an RH line built from the same elements and with a long coplanar waveguide terminated by the same SQUID. We derive the quantum Hamiltonian and show that the coupling between two modes factorizes into their amplitudes at the SQUID. Together, the LH spectrum and the mode dependence of this coupling determine which modes are populated and how fast. With equal elements, the LH coupling grows with frequency and exceeds the RH one above a crossover pump frequency set by the cell inductance and capacitance, and only the LH line has resonances above the RH band edge. Pumping two modes at once lets a weakly coupled mode borrow coupling from a strongly coupled one, while crossings of resonance lines populate three or four modes without increasing the growth rate. Compared with the coplanar waveguide, the LH line has a similar coupling but keeps the created particles in the target mode, whereas the nearly equidistant waveguide spreads them over many pairs and needs more pump energy.",
+      "authors": "Valentin E. Salari, Fernando C. Lombardo, Paula I. Villar",
+      "published": "2026-10-29T17:56:20Z",
+      "url": "https://arxiv.org/abs/2610.40624",
+      "shelf": "quantum"
+    },
+    {
+      "id": "2610.40623",
+      "title": "Optimal Diamond Distance Estimation for Unitary Channels",
+      "abstract": "The diamond distance between two quantum channels determines the optimal probability of distinguishing them from a single use. We give a quantum algorithm that estimates the diamond distance between two unknown $d$-dimensional unitary channels to within additive error $\\varepsilon$, using $O(\\sqrt{d}/\\varepsilon)$ queries to the unitary channels and their inverses. The query complexity is optimal, as it matches the lower bound due to Jeon and Oh (npj Quantum Inf. 2026).",
+      "authors": "Jinge Bao, Qisheng Wang",
+      "published": "2026-10-29T17:56:18Z",
+      "url": "https://arxiv.org/abs/2610.40623",
+      "shelf": "quantum"
+    },
+    {
+      "id": "2610.40612",
+      "title": "Exceptional Points as Witnesses of Non-Gaussian Noise",
+      "abstract": "Efficient control of quantum devices requires the knowledge of their environmental noise, yet the commonly measured power spectrum does not fully characterize non-Gaussian fluctuations of realistic environments. Here we show that exceptional points (EPs) in the noise-averaged dephasing response can expose observable signatures of non-Gaussian statistics, distinguishing environments with identical lower-order statistics. We also introduce a theoretical model that describes dephasing environments in terms of identical independent noise sources while preserving the power spectrum. Given a calibrated single-source model, the largest EP order extracted from the measured dephasing response determines the number of sources and predicts the higher-order statistics of the combined noise. We illustrate an atomtronic readout that maps distinct EP signatures onto an evolving ensemble-averaged atomic interference pattern. Our results connect non-Hermitian dynamics to environmental noise statistics, providing a route to characterize noise in quantum devices used in computing, metrology, and precision measurement.",
+      "authors": "Aritra Ghosh, Subhashish Banerjee, M. Bhattacharya",
+      "published": "2026-10-29T17:54:10Z",
+      "url": "https://arxiv.org/abs/2610.40612",
+      "shelf": "quantum"
+    },
+    {
+      "id": "2610.40596",
+      "title": "Algebraic theory of abelian fractons and beyond",
+      "abstract": "We develop an algebraic theory of fusion, mobility, and statistics in abelian gapped fracton orders and topological phases. The framework generalizes the algebraic description of abelian anyons to systems with restricted-mobility and spatially extended excitations. We consider translation-invariant bosonic systems whose pointlike and extended excitations have finite fusion order. The basic objects are braided fusion complexes (BFCs): chain complexes encoding fusion and mobility, equipped with a braiding chain map encoding statistics. Their equivalence classes define braided fusion theories (BFTs). Our framework encompasses arbitrary translation-invariant Pauli codes, as well as all abelian anyon theories in two spatial dimensions, including chiral theories. We give evidence for the conjecture that every nondegenerate BFT can be realized as the excitation theory of a gapped phase and that the BFT describing such a phase is a phase invariant. We derive constraints on pointlike fusion and mobility, showing, for example, that neither the Pauli X nor Z sectors of the X-cube and anisotropic models can occur alone in a nondegenerate BFT. For nondegenerate theories with only pointlike excitations, we extract a simpler theory of mutual statistics, consisting of a fusion module and a map to its statistical dual. This theory of mutual statistics is an invariant of the BFT and, at odd fusion order, gives an equivalent description of the full braided fusion theory. We interpret remote detection as the generalization of mutual statistics to fracton orders. In the BFC setting, we give a precise formulation of the excitation-detector principle: every nontrivial excitation can be detected by an operator supported at spatial infinity, and every nontrivial detector detects some excitation. Assuming a unique infinite-space ground state, we prove that this principle is equivalent to nondegeneracy.",
+      "authors": "Wilbur Shirley, Evan Wickenden, Bowen Yang, Agn\u00e8s Beaudry, Michael Hermele",
+      "published": "2026-10-29T17:50:05Z",
+      "url": "https://arxiv.org/abs/2610.40596",
+      "shelf": "quantum"
+    },
+    {
+      "id": "2610.40595",
+      "title": "Optimal detuning and gate time for strongly driven single-qubit gates beyond the rotating-wave approximation",
+      "abstract": "Single-qubit quantum gates are implemented as the time-controlled unitary evolution of a two-level system under harmonic driving. The rotating-wave approximation (RWA) provides closed-form gate parameters for weak coupling. Larger amplitudes, desirable to speed up the dynamics, make the RWA-designed gates inaccurate because of the neglected counter-rotating term, which also shifts the resonance (Bloch-Siegert shift). Here we study theoretically the infidelity of gates beyond the RWA, using the effective Magnus-Taylor Hamiltonian through second order in the inverse of the driving frequency. By detuning the driving frequency by an amplitude-dependent shift of Bloch-Siegert type and rescaling the operation time, the RWA gate conditions are recovered with corrected parameters. Numerical solutions of the Schrodinger equation show that these corrections lower the gate infidelity by several orders of magnitude, extending the range of usable amplitudes",
+      "authors": "Alejandro D. Bendersky, Sergio S. Gomez, Rodolfo H. Romero",
+      "published": "2026-10-29T17:49:56Z",
+      "url": "https://arxiv.org/abs/2610.40595",
+      "shelf": "quantum"
+    }
+  ]
+}

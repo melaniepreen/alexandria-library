@@ -1,0 +1,1502 @@
+{
+  "source": "The peak of doom in quantum computers.mp3",
+  "method": "faster-whisper tiny.en; automatic, speaker attribution unverified",
+  "duration": 634.8,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.52,
+      "text": "Imagine you're in a deep sea submarine, Melley."
+    },
+    {
+      "start": 2.52,
+      "end": 4.32,
+      "text": "I mean, on the surface, the titanium hull"
+    },
+    {
+      "start": 4.32,
+      "end": 6.52,
+      "text": "looks flawless and, you know,"
+    },
+    {
+      "start": 6.52,
+      "end": 7.76,
+      "text": "the math checks out perfectly."
+    },
+    {
+      "start": 7.76,
+      "end": 9.16,
+      "text": "Right, but at the surface,"
+    },
+    {
+      "start": 9.16,
+      "end": 10.6,
+      "text": "you aren't really testing the system"
+    },
+    {
+      "start": 10.6,
+      "end": 13.4,
+      "text": "against the crushing environment it was actually built for."
+    },
+    {
+      "start": 13.4,
+      "end": 16.24,
+      "text": "It's purely a theoretical success at that point."
+    },
+    {
+      "start": 16.24,
+      "end": 18.08,
+      "text": "Yeah, and then you start to dive."
+    },
+    {
+      "start": 18.08,
+      "end": 21.04,
+      "text": "As you go deeper, the invisible, chaotic pressure"
+    },
+    {
+      "start": 21.04,
+      "end": 23.24,
+      "text": "of the ocean just starts pressing in."
+    },
+    {
+      "start": 23.24,
+      "end": 26.04,
+      "text": "And at a certain depth, that perfect hull"
+    },
+    {
+      "start": 26.04,
+      "end": 29.48,
+      "text": "is going to groan, buckle, and eventually implode."
+    },
+    {
+      "start": 29.48,
+      "end": 32.2,
+      "text": "So the most important question for anyone inside"
+    },
+    {
+      "start": 32.2,
+      "end": 34.72,
+      "text": "isn't just, like, is the sub-strong."
+    },
+    {
+      "start": 34.72,
+      "end": 38.08,
+      "text": "But at what exact depth does the ocean win?"
+    },
+    {
+      "start": 38.08,
+      "end": 41.0,
+      "text": "That is exactly what we are exploring for you today, Melley,"
+    },
+    {
+      "start": 41.0,
+      "end": 43.2,
+      "text": "in this custom-tailored exploration"
+    },
+    {
+      "start": 43.2,
+      "end": 44.36,
+      "text": "into the source material."
+    },
+    {
+      "start": 44.36,
+      "end": 45.76,
+      "text": "Yeah, it's a really fascinating paper."
+    },
+    {
+      "start": 45.76,
+      "end": 46.6,
+      "text": "It is."
+    },
+    {
+      "start": 46.6,
+      "end": 48.76,
+      "text": "It's a June 2026 paper titled,"
+    },
+    {
+      "start": 48.76,
+      "end": 51.28,
+      "text": "QPU Scale Randomized Benchmarking"
+    },
+    {
+      "start": 51.28,
+      "end": 52.96,
+      "text": "via Bell-Pare Injection."
+    },
+    {
+      "start": 52.96,
+      "end": 55.4,
+      "text": "It's by a great team of researchers."
+    },
+    {
+      "start": 55.4,
+      "end": 58.16,
+      "text": "Hurrippria Pedagani, Maria Guato-Yanya's,"
+    },
+    {
+      "start": 59.16,
+      "end": 61.28,
+      "text": "Danyoopal Trini and Chains are wooden."
+    },
+    {
+      "start": 61.28,
+      "end": 62.92,
+      "text": "Such a powerhouse team."
+    },
+    {
+      "start": 62.92,
+      "end": 63.84,
+      "text": "Truly."
+    },
+    {
+      "start": 63.84,
+      "end": 67.2,
+      "text": "And we are looking at how scientists are discovering"
+    },
+    {
+      "start": 67.2,
+      "end": 70.6,
+      "text": "the absolute breaking point, like the actual ceiling"
+    },
+    {
+      "start": 70.6,
+      "end": 73.12,
+      "text": "of modern quantum computers."
+    },
+    {
+      "start": 73.12,
+      "end": 74.92,
+      "text": "OK, so let's unpack this."
+    },
+    {
+      "start": 74.92,
+      "end": 76.84,
+      "text": "Before we get to the actual breakthrough,"
+    },
+    {
+      "start": 76.84,
+      "end": 79.88,
+      "text": "I think we need to understand why testing these machines"
+    },
+    {
+      "start": 79.88,
+      "end": 81.28,
+      "text": "has become such a massive headache."
+    },
+    {
+      "start": 81.28,
+      "end": 81.92,
+      "text": "Oh, yeah."
+    },
+    {
+      "start": 81.92,
+      "end": 84.72,
+      "text": "Especially as they scale past 100 qubits."
+    },
+    {
+      "start": 84.72,
+      "end": 86.8,
+      "text": "Well, at the 100 plus qubit scale,"
+    },
+    {
+      "start": 86.8,
+      "end": 89.4,
+      "text": "these quantum processing units, or QPUs,"
+    },
+    {
+      "start": 89.4,
+      "end": 91.6,
+      "text": "can tackle problems that classical computers just"
+    },
+    {
+      "start": 91.6,
+      "end": 93.0,
+      "text": "can't touch."
+    },
+    {
+      "start": 93.0,
+      "end": 95.76,
+      "text": "But as the system size and the circuit depth"
+    },
+    {
+      "start": 95.76,
+      "end": 98.6,
+      "text": "grow, the error is basically snowball."
+    },
+    {
+      "start": 98.6,
+      "end": 101.2,
+      "text": "You get this intense cross-talk between qubits."
+    },
+    {
+      "start": 101.2,
+      "end": 102.56,
+      "text": "I think they're talking over each other."
+    },
+    {
+      "start": 102.56,
+      "end": 103.2,
+      "text": "Exactly."
+    },
+    {
+      "start": 103.2,
+      "end": 104.8,
+      "text": "And decoherence, where they just lose"
+    },
+    {
+      "start": 104.8,
+      "end": 106.36,
+      "text": "their quantum state entirely."
+    },
+    {
+      "start": 106.36,
+      "end": 107.88,
+      "text": "So the old way of testing, which"
+    },
+    {
+      "start": 107.88,
+      "end": 110.72,
+      "text": "was measuring individual localized gate"
+    },
+    {
+      "start": 110.72,
+      "end": 112.88,
+      "text": "fatalities, it just completely fails"
+    },
+    {
+      "start": 112.88,
+      "end": 114.92,
+      "text": "to capture the holistic performance of the machine."
+    },
+    {
+      "start": 114.92,
+      "end": 116.68,
+      "text": "I always think of it like an orchestra."
+    },
+    {
+      "start": 116.68,
+      "end": 119.72,
+      "text": "It's no longer just about whether one single violinist is"
+    },
+    {
+      "start": 119.72,
+      "end": 120.52,
+      "text": "in tune."
+    },
+    {
+      "start": 120.52,
+      "end": 124.2,
+      "text": "It's about whether the whole orchestra can play a symphony"
+    },
+    {
+      "start": 124.2,
+      "end": 127.64,
+      "text": "without collapsing into just awful noise."
+    },
+    {
+      "start": 127.64,
+      "end": 129.04,
+      "text": "That's a perfect analogy."
+    },
+    {
+      "start": 129.04,
+      "end": 131.28,
+      "text": "And if we connect this to the bigger picture,"
+    },
+    {
+      "start": 131.28,
+      "end": 133.56,
+      "text": "the field basically developed two main ways"
+    },
+    {
+      "start": 133.56,
+      "end": 137.52,
+      "text": "to test that orchestra, but both had flaws."
+    },
+    {
+      "start": 137.52,
+      "end": 138.96,
+      "text": "Right, the legacy solution."
+    },
+    {
+      "start": 138.96,
+      "end": 139.16,
+      "text": "Yeah."
+    },
+    {
+      "start": 139.16,
+      "end": 142.6,
+      "text": "First, there's mirror randomized benchmarking, or MRB."
+    },
+    {
+      "start": 142.6,
+      "end": 144.28,
+      "text": "MRB takes a quantum circuit,"
+    },
+    {
+      "start": 144.28,
+      "end": 146.56,
+      "text": "twirls it with random polygates, which"
+    },
+    {
+      "start": 146.56,
+      "end": 149.08,
+      "text": "is basically just applying simple rotations"
+    },
+    {
+      "start": 149.08,
+      "end": 153.04,
+      "text": "to scramble these complex, unpredictable errors"
+    },
+    {
+      "start": 153.04,
+      "end": 154.84,
+      "text": "into manageable background noise."
+    },
+    {
+      "start": 154.84,
+      "end": 155.76,
+      "text": "Oh, OK."
+    },
+    {
+      "start": 155.76,
+      "end": 159.0,
+      "text": "And then it perfectly mirrors or reverses the circuit"
+    },
+    {
+      "start": 159.0,
+      "end": 162.04,
+      "text": "to see if the system returns to its exact starting state."
+    },
+    {
+      "start": 162.04,
+      "end": 164.56,
+      "text": "It measures what we call entanglement infidelity."
+    },
+    {
+      "start": 164.56,
+      "end": 165.2,
+      "text": "Got it."
+    },
+    {
+      "start": 165.2,
+      "end": 169.72,
+      "text": "I always picture MRB like walking a complex winding path"
+    },
+    {
+      "start": 169.72,
+      "end": 171.76,
+      "text": "through a maze while blindfolded."
+    },
+    {
+      "start": 171.76,
+      "end": 173.32,
+      "text": "And then when you get to the center,"
+    },
+    {
+      "start": 173.32,
+      "end": 175.76,
+      "text": "you're asked to walk perfectly backward to your starting point."
+    },
+    {
+      "start": 175.76,
+      "end": 178.44,
+      "text": "If you bump into a wall, that's a quantum error."
+    },
+    {
+      "start": 178.44,
+      "end": 179.56,
+      "text": "Yes, exactly."
+    },
+    {
+      "start": 179.56,
+      "end": 183.04,
+      "text": "And the other predecessor is quantum awesomeness or QA."
+    },
+    {
+      "start": 183.04,
+      "end": 184.8,
+      "text": "Best name for a protocol, ever, by the way."
+    },
+    {
+      "start": 184.8,
+      "end": 185.48,
+      "text": "It really is."
+    },
+    {
+      "start": 185.48,
+      "end": 187.28,
+      "text": "So QA is highly visual."
+    },
+    {
+      "start": 187.28,
+      "end": 190.32,
+      "text": "It maps out these gamified puzzles of entangled quibbit"
+    },
+    {
+      "start": 190.32,
+      "end": 193.28,
+      "text": "pairs across the device to find the peak of doom."
+    },
+    {
+      "start": 193.28,
+      "end": 194.68,
+      "text": "The peak of doom."
+    },
+    {
+      "start": 194.68,
+      "end": 196.32,
+      "text": "Yeah, that's the exact circuit depth"
+    },
+    {
+      "start": 196.32,
+      "end": 199.84,
+      "text": "where noise totally obscures the correlation signals."
+    },
+    {
+      "start": 199.84,
+      "end": 201.24,
+      "text": "But here's the issue."
+    },
+    {
+      "start": 201.24,
+      "end": 204.8,
+      "text": "While MRB is mathematically rigorous and scalable,"
+    },
+    {
+      "start": 204.8,
+      "end": 207.92,
+      "text": "it relies on these really broad global averages."
+    },
+    {
+      "start": 207.92,
+      "end": 209.68,
+      "text": "It lacks fine diagnostics."
+    },
+    {
+      "start": 209.68,
+      "end": 210.04,
+      "text": "Right."
+    },
+    {
+      "start": 210.04,
+      "end": 213.32,
+      "text": "And QA tracks specific correlations, which is great,"
+    },
+    {
+      "start": 213.32,
+      "end": 215.8,
+      "text": "but it isn't scalable enough for massive chips."
+    },
+    {
+      "start": 215.8,
+      "end": 217.84,
+      "text": "So we basically need a hybrid, which"
+    },
+    {
+      "start": 217.84,
+      "end": 219.4,
+      "text": "brings us to the mashup."
+    },
+    {
+      "start": 219.4,
+      "end": 222.2,
+      "text": "Mirror quantum awesomeness or MQA."
+    },
+    {
+      "start": 222.2,
+      "end": 223.84,
+      "text": "Yes, MQA."
+    },
+    {
+      "start": 223.84,
+      "end": 226.84,
+      "text": "They match the two methods together, and it's brilliant."
+    },
+    {
+      "start": 226.84,
+      "end": 230.88,
+      "text": "MQA takes that mirrored reversible circuit from MRB,"
+    },
+    {
+      "start": 230.88,
+      "end": 233.64,
+      "text": "but right at the beginning, it injects a highly structured"
+    },
+    {
+      "start": 233.64,
+      "end": 234.84,
+      "text": "entangling layer."
+    },
+    {
+      "start": 234.84,
+      "end": 235.84,
+      "text": "OK, what kind of layer?"
+    },
+    {
+      "start": 235.84,
+      "end": 237.72,
+      "text": "They create what are called bell pairs,"
+    },
+    {
+      "start": 237.72,
+      "end": 239.84,
+      "text": "using Rx of theta rotations."
+    },
+    {
+      "start": 239.84,
+      "end": 240.72,
+      "text": "Rx of theta."
+    },
+    {
+      "start": 240.72,
+      "end": 242.84,
+      "text": "Yeah, it's essentially turning a quantum dial"
+    },
+    {
+      "start": 242.84,
+      "end": 246.12,
+      "text": "to gently twist two quibbits into a delicate, shared,"
+    },
+    {
+      "start": 246.12,
+      "end": 247.2,
+      "text": "entangled state."
+    },
+    {
+      "start": 247.2,
+      "end": 250.08,
+      "text": "So Melanie, think of a quantum chip like a giant city grid."
+    },
+    {
+      "start": 250.08,
+      "end": 252.72,
+      "text": "MQA tracks the relationships between quibbits"
+    },
+    {
+      "start": 252.72,
+      "end": 256.0,
+      "text": "on this grid using a metric called mutual information."
+    },
+    {
+      "start": 256.0,
+      "end": 256.36,
+      "text": "Right."
+    },
+    {
+      "start": 256.36,
+      "end": 259.44,
+      "text": "And there are three specific types of relationships they track."
+    },
+    {
+      "start": 259.44,
+      "end": 261.24,
+      "text": "Yeah, you've got paired edges,"
+    },
+    {
+      "start": 261.24,
+      "end": 263.88,
+      "text": "which are the quibbits intentionally entangled together."
+    },
+    {
+      "start": 263.88,
+      "end": 265.6,
+      "text": "Then there are spectator edges, which"
+    },
+    {
+      "start": 265.6,
+      "end": 267.52,
+      "text": "sit right next to the paired quibbits."
+    },
+    {
+      "start": 267.52,
+      "end": 270.8,
+      "text": "And finally, isolated edges, which are just completely"
+    },
+    {
+      "start": 270.8,
+      "end": 271.72,
+      "text": "separate from the pairs."
+    },
+    {
+      "start": 271.72,
+      "end": 272.28,
+      "text": "Exactly."
+    },
+    {
+      "start": 272.28,
+      "end": 274.36,
+      "text": "It's a color-coded network of data."
+    },
+    {
+      "start": 274.36,
+      "end": 275.76,
+      "text": "But wait, I'm stuck on something here."
+    },
+    {
+      "start": 275.76,
+      "end": 276.48,
+      "text": "What's that?"
+    },
+    {
+      "start": 276.48,
+      "end": 279.64,
+      "text": "If you inject these incredibly fragile bell pairs"
+    },
+    {
+      "start": 279.64,
+      "end": 283.8,
+      "text": "into the MRB setup, won't the standard randomized,"
+    },
+    {
+      "start": 283.8,
+      "end": 286.2,
+      "text": "Clifford layers that MRB usually uses"
+    },
+    {
+      "start": 286.2,
+      "end": 289.88,
+      "text": "like heavily shuffling a deck of cards before dealing,"
+    },
+    {
+      "start": 289.88,
+      "end": 292.96,
+      "text": "won't that just completely scramble the parity"
+    },
+    {
+      "start": 292.96,
+      "end": 294.36,
+      "text": "and ruin the measurement?"
+    },
+    {
+      "start": 294.36,
+      "end": 295.84,
+      "text": "That is such a great question."
+    },
+    {
+      "start": 295.84,
+      "end": 297.8,
+      "text": "And the researchers actually discovered exactly"
+    },
+    {
+      "start": 297.8,
+      "end": 299.2,
+      "text": "that problem in their simulations."
+    },
+    {
+      "start": 299.2,
+      "end": 299.76,
+      "text": "Oh, really?"
+    },
+    {
+      "start": 299.76,
+      "end": 300.52,
+      "text": "Yeah."
+    },
+    {
+      "start": 300.52,
+      "end": 302.88,
+      "text": "When they ran standard MRB, the shuffling"
+    },
+    {
+      "start": 302.88,
+      "end": 304.44,
+      "text": "made the data totally chaotic."
+    },
+    {
+      "start": 304.44,
+      "end": 306.76,
+      "text": "They couldn't get a clean exponential decay."
+    },
+    {
+      "start": 306.76,
+      "end": 307.84,
+      "text": "So how did they fix it?"
+    },
+    {
+      "start": 307.84,
+      "end": 310.56,
+      "text": "To get a clean signal, they explicitly"
+    },
+    {
+      "start": 310.56,
+      "end": 314.48,
+      "text": "had to emit those initial and final single quibbit"
+    },
+    {
+      "start": 314.48,
+      "end": 315.88,
+      "text": "Clifford layers."
+    },
+    {
+      "start": 315.88,
+      "end": 317.4,
+      "text": "And this is key."
+    },
+    {
+      "start": 317.4,
+      "end": 320.04,
+      "text": "They had to change how they measured the result."
+    },
+    {
+      "start": 320.04,
+      "end": 323.0,
+      "text": "Instead of reading the exact raw bit strings, which"
+    },
+    {
+      "start": 323.0,
+      "end": 325.36,
+      "text": "get easily flipped by noise, they"
+    },
+    {
+      "start": 325.36,
+      "end": 328.2,
+      "text": "switched to a parity-based measurement."
+    },
+    {
+      "start": 328.2,
+      "end": 330.12,
+      "text": "They checked the XOR parity."
+    },
+    {
+      "start": 330.12,
+      "end": 332.12,
+      "text": "Meaning, a set of meaning to know if both quibbits"
+    },
+    {
+      "start": 332.12,
+      "end": 334.92,
+      "text": "are exactly a one or exactly a zero."
+    },
+    {
+      "start": 334.92,
+      "end": 337.6,
+      "text": "XOR parity acts like a filter."
+    },
+    {
+      "start": 337.6,
+      "end": 340.4,
+      "text": "It just asks, are they the same or are they different?"
+    },
+    {
+      "start": 340.4,
+      "end": 341.12,
+      "text": "Precisely."
+    },
+    {
+      "start": 341.12,
+      "end": 342.68,
+      "text": "If filters out the surrounding noise,"
+    },
+    {
+      "start": 342.68,
+      "end": 344.68,
+      "text": "so you can just focus on their relationship itself."
+    },
+    {
+      "start": 344.68,
+      "end": 345.72,
+      "text": "That's super clever."
+    },
+    {
+      "start": 345.72,
+      "end": 346.36,
+      "text": "It is."
+    },
+    {
+      "start": 346.36,
+      "end": 347.64,
+      "text": "And what's fascinating here is they"
+    },
+    {
+      "start": 347.64,
+      "end": 349.92,
+      "text": "found that by tweaking that entanglement dial"
+    },
+    {
+      "start": 349.92,
+      "end": 353.72,
+      "text": "like, setting the angle theta to pi over 4 instead"
+    },
+    {
+      "start": 353.72,
+      "end": 357.04,
+      "text": "of a full pi over 2, they intentionally"
+    },
+    {
+      "start": 357.04,
+      "end": 361.0,
+      "text": "allowed noise to bleed into those adjacent spectator edges."
+    },
+    {
+      "start": 361.0,
+      "end": 361.64,
+      "text": "Wow."
+    },
+    {
+      "start": 361.64,
+      "end": 364.08,
+      "text": "So they can literally watch the noise spread across the chip's"
+    },
+    {
+      "start": 364.08,
+      "end": 366.52,
+      "text": "grid in real time as the computation runs deeper."
+    },
+    {
+      "start": 366.52,
+      "end": 367.0,
+      "text": "Exactly."
+    },
+    {
+      "start": 367.0,
+      "end": 369.88,
+      "text": "It's like injecting a harmless glowing die into a river"
+    },
+    {
+      "start": 369.88,
+      "end": 371.4,
+      "text": "just to map out the hidden currents."
+    },
+    {
+      "start": 371.4,
+      "end": 373.44,
+      "text": "So they built this amazing diagnostic tool."
+    },
+    {
+      "start": 373.44,
+      "end": 375.88,
+      "text": "But the real test is plugging it into actual hardware."
+    },
+    {
+      "start": 375.88,
+      "end": 376.48,
+      "text": "And they did."
+    },
+    {
+      "start": 376.48,
+      "end": 379.8,
+      "text": "They validated MQA on real IBM hardware."
+    },
+    {
+      "start": 379.8,
+      "end": 383.28,
+      "text": "Specifically, they used the 156-quibbit ibimfes"
+    },
+    {
+      "start": 383.28,
+      "end": 385.12,
+      "text": "and the Imman Kingston processors."
+    },
+    {
+      "start": 385.12,
+      "end": 386.12,
+      "text": "And how did it hold up?"
+    },
+    {
+      "start": 386.12,
+      "end": 387.0,
+      "text": "Incredibly well."
+    },
+    {
+      "start": 387.0,
+      "end": 390.24,
+      "text": "The entanglement infidelity, measured by MQA,"
+    },
+    {
+      "start": 390.24,
+      "end": 393.36,
+      "text": "perfectly matched the traditional MRB standard"
+    },
+    {
+      "start": 393.36,
+      "end": 396.16,
+      "text": "to within a 10% tolerance window."
+    },
+    {
+      "start": 396.16,
+      "end": 396.66,
+      "text": "Oh, wow."
+    },
+    {
+      "start": 396.66,
+      "end": 400.84,
+      "text": "On imfes, the difference was just negative 5.04%."
+    },
+    {
+      "start": 400.84,
+      "end": 402.24,
+      "text": "So they didn't break the benchmark"
+    },
+    {
+      "start": 402.24,
+      "end": 403.44,
+      "text": "by adding the bell pairs."
+    },
+    {
+      "start": 403.44,
+      "end": 405.36,
+      "text": "They just gave it high definition visibility."
+    },
+    {
+      "start": 405.36,
+      "end": 406.36,
+      "text": "Exactly."
+    },
+    {
+      "start": 406.36,
+      "end": 410.2,
+      "text": "And with that visibility, they hunted for the climax,"
+    },
+    {
+      "start": 410.2,
+      "end": 412.2,
+      "text": "the peak of doom."
+    },
+    {
+      "start": 412.2,
+      "end": 415.96,
+      "text": "Using a depolarizing noise model reference of about 1%,"
+    },
+    {
+      "start": 415.96,
+      "end": 417.88,
+      "text": "they ran the circuits deeper and deeper"
+    },
+    {
+      "start": 417.88,
+      "end": 422.08,
+      "text": "on the heavy hex architecture of the 156-quibbit infas."
+    },
+    {
+      "start": 422.08,
+      "end": 424.04,
+      "text": "But here's where it gets really interesting."
+    },
+    {
+      "start": 424.04,
+      "end": 426.44,
+      "text": "They found the exact point where the mutual information"
+    },
+    {
+      "start": 426.44,
+      "end": 428.44,
+      "text": "of those isolated pairs peaked."
+    },
+    {
+      "start": 428.44,
+      "end": 430.28,
+      "text": "And the noise completely overwhelmed"
+    },
+    {
+      "start": 430.28,
+      "end": 431.4,
+      "text": "the structured correlations."
+    },
+    {
+      "start": 431.4,
+      "end": 433.04,
+      "text": "Yeah, any guess at what depth?"
+    },
+    {
+      "start": 433.04,
+      "end": 435.4,
+      "text": "It happened at a circuit depth of approximately 50."
+    },
+    {
+      "start": 435.4,
+      "end": 436.68,
+      "text": "Yep, that's 50."
+    },
+    {
+      "start": 436.68,
+      "end": 439.64,
+      "text": "And for Humelone, depth 50 represents a practical,"
+    },
+    {
+      "start": 439.64,
+      "end": 440.92,
+      "text": "physical ceiling."
+    },
+    {
+      "start": 440.92,
+      "end": 443.08,
+      "text": "It's the depth where standard error mitigation"
+    },
+    {
+      "start": 443.08,
+      "end": 444.2,
+      "text": "starts failing."
+    },
+    {
+      "start": 444.2,
+      "end": 446.56,
+      "text": "To push past depth 50 on that machine,"
+    },
+    {
+      "start": 446.56,
+      "end": 448.8,
+      "text": "you need massive computational overhead."
+    },
+    {
+      "start": 448.8,
+      "end": 450.8,
+      "text": "It's basically the depth where a submarine hole"
+    },
+    {
+      "start": 450.8,
+      "end": 451.84,
+      "text": "starts cracking."
+    },
+    {
+      "start": 451.84,
+      "end": 454.44,
+      "text": "But the researchers didn't just stop there."
+    },
+    {
+      "start": 454.44,
+      "end": 456.16,
+      "text": "They wanted to push even further"
+    },
+    {
+      "start": 456.16,
+      "end": 459.12,
+      "text": "to extract deeper device-wide properties."
+    },
+    {
+      "start": 459.12,
+      "end": 459.46,
+      "text": "Oh."
+    },
+    {
+      "start": 459.46,
+      "end": 462.96,
+      "text": "Yes, see, the heavy hex architecture of infas"
+    },
+    {
+      "start": 462.96,
+      "end": 465.52,
+      "text": "restricts how you can pair quivids."
+    },
+    {
+      "start": 465.52,
+      "end": 468.4,
+      "text": "So they developed a variant called topological MQA"
+    },
+    {
+      "start": 468.4,
+      "end": 469.4,
+      "text": "or TMQA."
+    },
+    {
+      "start": 469.4,
+      "end": 470.36,
+      "text": "TMQA."
+    },
+    {
+      "start": 470.36,
+      "end": 473.24,
+      "text": "But this requires a square lattice coupling map,"
+    },
+    {
+      "start": 473.24,
+      "end": 476.28,
+      "text": "like the one on the 120 qubit in Miami processor."
+    },
+    {
+      "start": 476.28,
+      "end": 478.2,
+      "text": "OK, so with TMQA, they basically"
+    },
+    {
+      "start": 478.2,
+      "end": 481.16,
+      "text": "turn the entire chip into a massive topology puzzle."
+    },
+    {
+      "start": 481.16,
+      "end": 481.88,
+      "text": "Right."
+    },
+    {
+      "start": 481.88,
+      "end": 484.04,
+      "text": "The protocol creates two types of puzzles"
+    },
+    {
+      "start": 484.04,
+      "end": 485.4,
+      "text": "across the whole chip."
+    },
+    {
+      "start": 485.4,
+      "end": 487.96,
+      "text": "Closed means every single qubit is perfectly"
+    },
+    {
+      "start": 487.96,
+      "end": 489.0,
+      "text": "paired with a neighbor."
+    },
+    {
+      "start": 489.0,
+      "end": 489.96,
+      "text": "And the other type."
+    },
+    {
+      "start": 489.96,
+      "end": 490.84,
+      "text": "Open."
+    },
+    {
+      "start": 490.84,
+      "end": 493.8,
+      "text": "That means one qubit on the far left boundary of the chip"
+    },
+    {
+      "start": 493.8,
+      "end": 495.44,
+      "text": "and one on the far right boundary"
+    },
+    {
+      "start": 495.44,
+      "end": 497.64,
+      "text": "are intentionally left isolated"
+    },
+    {
+      "start": 497.64,
+      "end": 499.24,
+      "text": "while everything else is paired up."
+    },
+    {
+      "start": 499.24,
+      "end": 501.64,
+      "text": "OK, so they run the circuit, then what?"
+    },
+    {
+      "start": 501.64,
+      "end": 503.44,
+      "text": "Then a decoding bot steps in."
+    },
+    {
+      "start": 503.44,
+      "end": 505.84,
+      "text": "It uses a minimum white perfect matching problem"
+    },
+    {
+      "start": 505.84,
+      "end": 508.24,
+      "text": "to look at the messy, noisy, mutual information"
+    },
+    {
+      "start": 508.24,
+      "end": 510.16,
+      "text": "left over after the circuit runs."
+    },
+    {
+      "start": 510.16,
+      "end": 512.72,
+      "text": "And the bot just has to guess, was this an open puzzle"
+    },
+    {
+      "start": 512.72,
+      "end": 513.88,
+      "text": "or a closed puzzle?"
+    },
+    {
+      "start": 513.88,
+      "end": 516.48,
+      "text": "Melanie, imagine playing a giant game of telephone"
+    },
+    {
+      "start": 516.48,
+      "end": 519.48,
+      "text": "across a crowded stadium during a heavy metal concert."
+    },
+    {
+      "start": 519.48,
+      "end": 520.52,
+      "text": "Perfect visual."
+    },
+    {
+      "start": 520.52,
+      "end": 522.04,
+      "text": "The bot just has to figure out"
+    },
+    {
+      "start": 522.04,
+      "end": 524.88,
+      "text": "if the two people standing at the far exit doors"
+    },
+    {
+      "start": 524.88,
+      "end": 526.96,
+      "text": "were left out of the whisper chain."
+    },
+    {
+      "start": 526.96,
+      "end": 528.76,
+      "text": "It's a simple binary choice."
+    },
+    {
+      "start": 528.76,
+      "end": 531.4,
+      "text": "But finding that answer through the deafening noise"
+    },
+    {
+      "start": 531.4,
+      "end": 533.48,
+      "text": "is incredibly difficult."
+    },
+    {
+      "start": 533.48,
+      "end": 535.72,
+      "text": "And this raises an important question."
+    },
+    {
+      "start": 535.72,
+      "end": 538.24,
+      "text": "How well does the bot actually perform"
+    },
+    {
+      "start": 538.24,
+      "end": 539.72,
+      "text": "as the noise increases?"
+    },
+    {
+      "start": 539.72,
+      "end": 541.56,
+      "text": "Right, like when did it fail?"
+    },
+    {
+      "start": 541.56,
+      "end": 544.12,
+      "text": "While the researchers found the bot's success rate"
+    },
+    {
+      "start": 544.12,
+      "end": 547.08,
+      "text": "mimics a quantum error correction threshold."
+    },
+    {
+      "start": 547.08,
+      "end": 549.92,
+      "text": "For shallow depths, it guesses perfectly."
+    },
+    {
+      "start": 549.92,
+      "end": 552.72,
+      "text": "But at a critical depth, the success rate sharply"
+    },
+    {
+      "start": 552.72,
+      "end": 553.92,
+      "text": "drops off a cliff."
+    },
+    {
+      "start": 553.92,
+      "end": 555.12,
+      "text": "Just like the peak of doom."
+    },
+    {
+      "start": 555.12,
+      "end": 555.92,
+      "text": "Exactly."
+    },
+    {
+      "start": 555.92,
+      "end": 557.68,
+      "text": "It is an independent way to verify"
+    },
+    {
+      "start": 557.68,
+      "end": 560.12,
+      "text": "that exact ceiling where the system's noise"
+    },
+    {
+      "start": 560.12,
+      "end": 562.12,
+      "text": "fundamentally breaks the signal."
+    },
+    {
+      "start": 562.12,
+      "end": 563.52,
+      "text": "So what does this all mean?"
+    },
+    {
+      "start": 563.52,
+      "end": 565.6,
+      "text": "Melanie, whether you are catching up on the field,"
+    },
+    {
+      "start": 565.6,
+      "end": 568.56,
+      "text": "managing a tech team, or just prepping for a meeting."
+    },
+    {
+      "start": 568.56,
+      "end": 571.4,
+      "text": "The core takeaway is that MQA and TMQA"
+    },
+    {
+      "start": 571.4,
+      "end": 573.76,
+      "text": "give us a critical, scalable map"
+    },
+    {
+      "start": 573.76,
+      "end": 575.32,
+      "text": "of a quantum computer's limits."
+    },
+    {
+      "start": 575.32,
+      "end": 577.48,
+      "text": "Yeah, they don't just tell us if a quantum processor"
+    },
+    {
+      "start": 577.48,
+      "end": 578.28,
+      "text": "is noisy."
+    },
+    {
+      "start": 578.28,
+      "end": 580.44,
+      "text": "Right, they tell us exactly when the noise wins."
+    },
+    {
+      "start": 580.44,
+      "end": 582.44,
+      "text": "They pinpoint the absolute boundary"
+    },
+    {
+      "start": 582.44,
+      "end": 586.0,
+      "text": "between useful quantum computation and chaotic noise."
+    },
+    {
+      "start": 586.0,
+      "end": 587.48,
+      "text": "It's incredible work."
+    },
+    {
+      "start": 587.48,
+      "end": 588.16,
+      "text": "It really is."
+    },
+    {
+      "start": 588.16,
+      "end": 589.32,
+      "text": "And I want to leave you with a final thought"
+    },
+    {
+      "start": 589.32,
+      "end": 592.0,
+      "text": "to mow over at Melanie, something that builds on this,"
+    },
+    {
+      "start": 592.0,
+      "end": 593.64,
+      "text": "but goes a bit beyond the paper."
+    },
+    {
+      "start": 593.64,
+      "end": 594.92,
+      "text": "Oh, I like where this is going."
+    },
+    {
+      "start": 594.92,
+      "end": 597.64,
+      "text": "If we now have the math and the protocols"
+    },
+    {
+      "start": 597.64,
+      "end": 600.52,
+      "text": "to perfectly pinpoint the exact depth"
+    },
+    {
+      "start": 600.52,
+      "end": 604.68,
+      "text": "at which a highly controlled 150 plus quivit quantum system"
+    },
+    {
+      "start": 604.68,
+      "end": 607.6,
+      "text": "descends into chaotic noise,"
+    },
+    {
+      "start": 607.6,
+      "end": 611.52,
+      "text": "could we apply a similar awesomeness benchmarking structure"
+    },
+    {
+      "start": 611.52,
+      "end": 613.92,
+      "text": "to other complex noisy systems?"
+    },
+    {
+      "start": 613.92,
+      "end": 614.8,
+      "text": "Oh, wow."
+    },
+    {
+      "start": 614.8,
+      "end": 615.16,
+      "text": "Right."
+    },
+    {
+      "start": 615.16,
+      "end": 617.76,
+      "text": "What if we injected known structured signals"
+    },
+    {
+      "start": 617.76,
+      "end": 619.72,
+      "text": "into artificial neural networks"
+    },
+    {
+      "start": 619.72,
+      "end": 621.64,
+      "text": "or even global climate models?"
+    },
+    {
+      "start": 621.64,
+      "end": 623.88,
+      "text": "Could we track how that signaled decays"
+    },
+    {
+      "start": 623.88,
+      "end": 626.0,
+      "text": "to predict their exact critical breaking points"
+    },
+    {
+      "start": 626.0,
+      "end": 626.84,
+      "text": "before they fail?"
+    },
+    {
+      "start": 626.84,
+      "end": 628.16,
+      "text": "That's a huge thought."
+    },
+    {
+      "start": 628.16,
+      "end": 629.72,
+      "text": "If we can find the exact depth"
+    },
+    {
+      "start": 629.76,
+      "end": 631.76,
+      "text": "where the quantum submarine implodes,"
+    },
+    {
+      "start": 631.76,
+      "end": 633.16,
+      "text": "maybe we can find the pressure limits"
+    },
+    {
+      "start": 633.16,
+      "end": 634.92,
+      "text": "for the AI systems we're building today."
+    }
+  ]
+}

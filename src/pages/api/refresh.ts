@@ -1,0 +1,1 @@
+import {env,json} from '../../lib/server.mjs';import {refresh} from '../../../scripts/arxiv.mjs';export async function GET({request}){if(!env('CRON_SECRET')||request.headers.get('authorization')!==`Bearer ${env('CRON_SECRET')}`)return json({error:'Unauthorized'},401);try{return json(await refresh());}catch{return json({error:'Refresh failed; existing catalogue retained.'},502);}}

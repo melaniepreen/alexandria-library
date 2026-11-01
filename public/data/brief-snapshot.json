@@ -1,0 +1,51 @@
+{
+  "ideas": [
+    {
+      "paperId": "2610.40404",
+      "idea": "Stress-test martingale transport calibration",
+      "assumptions": "Compact support, bounded target density and interior source support must match the model.",
+      "test": "Compare convergence and stability against an existing solver on held-out option surfaces; this is numerical research, not an entry signal.",
+      "evidence": "We establish multidimensional exponential convergence of the lifted Bass gradient flow in martingale optimal transport.",
+      "title": "Exponential Convergence of the Lifted Gradient Flow of the Bass Functional",
+      "url": "https://arxiv.org/abs/2610.40404"
+    },
+    {
+      "paperId": "2610.40366",
+      "idea": "Require enough tail exceedances before ranking a risk forecast",
+      "assumptions": "The tail-event sample, scoring rule and dependence structure must match the comparison.",
+      "test": "Compare confidence-sequence rankings with Diebold-Mariano and bootstrap-t across out-of-sample windows.",
+      "evidence": "When two forecasts of a tail, such as prediction intervals at high coverage, extreme quantiles or expected shortfall (ES), are compared by a consistent score, the score difference is known in advance except on the days on which the outcome falls beyond a forecast.",
+      "title": "Comparing tail forecasts: the number of exceedances is the sample size",
+      "url": "https://arxiv.org/abs/2610.40366"
+    },
+    {
+      "paperId": "2610.40129",
+      "idea": "Test bottleneck-aware portfolio stress scenarios",
+      "assumptions": "Supply-chain weakest-link assumptions may not transfer to liquid portfolios.",
+      "test": "Compare scenario losses for lagging-input versus leading-input allocation after realistic implementation costs.",
+      "evidence": "The term Kessler syndrome was coined for a runaway orbital cascade creating a high-density debris field.",
+      "title": "The Generalised Kessler Syndrome and the Persian Gulf",
+      "url": "https://arxiv.org/abs/2610.40129"
+    },
+    {
+      "paperId": "2610.39896",
+      "idea": "Check truncation bias in strict-local-martingale pricing",
+      "assumptions": "The process, truncation conditions and CEV parameters must fit the stated theorem.",
+      "test": "Benchmark time-step convergence and pricing error before using model-implied valuations.",
+      "evidence": "For one-dimensional strict local martingales of the form $\\mathrm{d} X_t=\u03c3(X_t) \\mathrm{d} W_t$ starting from $X_{0}=x_{0}>0$, we prove the strong rate $\\mathbb{E}\\left[|X^h_N-X_T|\\right] \\lesssim h^{\\min\\{\u03b8\u03b1,\\frac{1}{2}\\}}$ for a discrete scheme~$X^h$ truncated at a level $h^{-\u03b1}$, with time step~$h$, as $h\\downarrow 0$, where~$\u03b8$ depends on the truncation property.",
+      "title": "Strong rate for one-dimensional driftless continuous strict local martingales",
+      "url": "https://arxiv.org/abs/2610.39896"
+    },
+    {
+      "paperId": "2610.39636",
+      "idea": "Treat sentiment features as a challenger to persistence",
+      "assumptions": "Time alignment, stock universe and volatility construction must be replicated.",
+      "test": "Run leakage-controlled walk-forward tests with transaction costs and multiple-testing correction; the abstract does not establish a general sentiment advantage.",
+      "evidence": "This study examines whether transformer-based financial news sentiment improves equity volatility forecasts beyond conventional market-based predictors.",
+      "title": "Information Flow and Market Risk: Transformer-Based Evidence on Sentiment and Volatility Dynamics",
+      "url": "https://arxiv.org/abs/2610.39636"
+    }
+  ],
+  "scope": "Abstract-grounded research prompts, not validated trading strategies. Snapshot checked 1 November 2026.",
+  "created_at": "2026-11-01T15:18:24Z"
+}

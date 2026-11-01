@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.vercel/
+.env
+.env.*
+!.env.example
+public/audio/*.mp3
+public/art/references/
+art-runs/
+qa/
+.DS_Store

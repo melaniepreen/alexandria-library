@@ -1,0 +1,2 @@
+import {feedbackSchema,recommendation} from '../../lib/domain.mjs';import {guard,db,json} from '../../lib/server.mjs';
+export async function POST({request}){try{const denied=await guard(request);if(denied)return denied;const f=feedbackSchema.parse(await request.json());await db('feedback',{method:'POST',body:JSON.stringify(f)});const recent=await db('feedback?order=created_at.desc&limit=10');return json({saved:true,...recommendation(recent.reverse())});}catch{return json({error:'Feedback could not be saved.'},400);}}

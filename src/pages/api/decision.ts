@@ -1,0 +1,1 @@
+import {guard,db,json} from '../../lib/server.mjs';import {recommendation} from '../../lib/domain.mjs';export async function GET({request}){try{const d=await guard(request);if(d)return d;return json(recommendation((await db('feedback?order=created_at.desc&limit=10')).reverse()));}catch{return json({error:'Recommendation service unavailable.'},503);}}

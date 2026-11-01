@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {requestSchema,feedbackSchema,recommendation,endReached,canonicalId} from '../src/lib/domain.mjs';import {parseFeed} from '../scripts/arxiv.mjs';
+test('rejects invalid durations and feedback',()=>{for(const minutes of [0,4,26,Infinity])assert.equal(requestSchema.safeParse({paperId:'x',minutes}).success,false);assert.equal(feedbackSchema.safeParse({paperId:'x',difficulty:6,usefulness:3}).success,false);});
+test('seeking to the end triggers the same completion rule',()=>{assert.equal(endReached(599.7,600),true);assert.equal(endReached(590,600),false);assert.equal(endReached(10,NaN),false);});
+test('feedback changes explanation style',()=>{assert.equal(recommendation([{difficulty:5}]).level,'gentle');assert.equal(recommendation([{difficulty:1}]).level,'technical');});
+test('canonical dedup removes versions',()=>assert.equal(canonicalId('http://arxiv.org/abs/2404.14115v2'),'2404.14115'));
+test('normalizes real atom metadata',()=>{const p=parseFeed('<feed><entry><id>http://arxiv.org/abs/2404.14115v2</id><title> A paper </title><summary>Abstract.</summary><author><name>A</name></author><published>2024-04-22T00:00:00Z</published><category term="quant-ph"/></entry></feed>');assert.equal(p[0].id,'2404.14115');assert.equal(p[0].shelf,'quantum');assert.equal(p[0].authors,'A');});

@@ -1,0 +1,1 @@
+import snapshot from '../../../public/data/brief-snapshot.json';import {configured,db,json} from '../../lib/server.mjs';export async function GET(){try{if(configured()){const rows=await db('briefs?order=created_at.desc&limit=1');if(rows.length)return json(rows[0]);}return json(snapshot);}catch{return json(snapshot);}}

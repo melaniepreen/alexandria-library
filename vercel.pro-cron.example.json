@@ -1,0 +1,1 @@
+{"framework":"astro","crons":[{"path":"/api/refresh","schedule":"0 */3 * * *"}]}
