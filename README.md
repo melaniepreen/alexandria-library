@@ -18,6 +18,18 @@ The reading room and open-book view shown here are from the local development pr
 
 ![An open research book with its audio conversation and Pip’s guidance](docs/screenshots/book-detail.jpg)
 
+### Meet Pip, your guide
+
+Select **Show me around** beside Pip to start a seven-step tour of the reading room. Pip points out the shelves and the listening experience, and you can move through the tour with **Next** or finish whenever you like. The tour pictured here is part of the current local development preview.
+
+![Pip guiding a reader through the bookshelf](docs/screenshots/pip-tutorial.jpg)
+
+### From research to conversation
+
+Open a book to see its original paper alongside an audio conversation and timestamped transcript. The example below shows a supplied two-host recording playing with its transcript open; you can read along or follow the link to the paper. Creating a fresh episode uses the optional generation setup described below.
+
+![A research paper alongside a playing podcast and timestamped transcript](docs/screenshots/podcast-transcript.jpg)
+
 ## How it works
 
 ```mermaid
