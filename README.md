@@ -10,6 +10,17 @@ But what happens when reading quickly is not how your mind works? For a dyslexic
 
 Pip, your wizard-cat librarian, guides you around the shelf, keeps you company as you listen, and offers questions to help you reflect on what you’ve learned. Your feedback helps the app adapt how it explains ideas. The longer-term vision includes helping you judge a paper’s credibility and relevance.
 
+
+## How I used Codex
+
+I built Alexandria Library with Codex as my coding partner. I shared the bookshelf idea, research papers, audio examples and visual references, then used Codex to inspect the material, build the app, test its interactions and refine the experience. Codex helped with the Astro interface, Pip’s guided tour, the audio player and transcript, local drafts and feedback, as well as the project’s architecture, documentation and GitHub workflow.
+
+For Pip, I borrowed Codex’s **hatch-pet** skill and combined it with ImageGen to turn my wizard-cat reference into a character for the library. The workflow created and checked animation frames for actions such as idle, waving and running, and the app uses those ideas to bring Pip into the reading experience. The [artwork notes](public/art/README.md) describe the prompts and asset provenance; Pip is part of this website.
+
+Codex also built the code behind the library’s research and audio workflows. The [refresh script](scripts/refresh.mjs) gathers arXiv metadata and research prompts; the [generation worker](scripts/worker.mjs) is designed to turn a selected source into a two-host script, audio, transcript, quiz and optional illustrations. These are app workflows created with Codex; new audio generation uses the configured cloud services described below.
+
+One example I could check: I wanted listeners to answer three questions after an episode. Codex implemented the end-of-playback rule so seeking to the end opens the same quiz as listening through, added a test for the threshold, and checked the quiz and feedback in the browser.
+
 ## A look inside
 
 The reading room and open-book view shown here are from the local development preview.
@@ -29,6 +40,18 @@ Select **Show me around** beside Pip to start a seven-step tour of the reading r
 Open a book to see its original paper alongside an audio conversation and timestamped transcript. The example below shows a supplied two-host recording playing with its transcript open; you can read along or follow the link to the paper. Creating a fresh episode uses the optional generation setup described below.
 
 ![A research paper alongside a playing podcast and timestamped transcript](docs/screenshots/podcast-transcript.jpg)
+
+### Choose a paper and generate a podcast
+
+Choose **Generate podcast** on a shelf to pick a recent paper and set the length of a two-host conversation. The generation screen below uses the current development preview; creating a new episode uses the connected generation services described in the setup guide.
+
+![Podcast generation screen showing a choice of recent papers](docs/screenshots/generate-podcast.jpg)
+
+### Check what you learned
+
+At the end of an episode, Pip presents three questions based on its transcript. You can check your answers and share how difficult and useful the conversation felt.
+
+![Pip’s end-of-episode quiz in the mobile book view](docs/screenshots/episode-quiz.jpg)
 
 ## How it works
 
@@ -77,9 +100,3 @@ To check the project, run `npm test` and `npm run build`.
 ## Create new episodes and send email
 
 The bookshelf can be explored locally. Generating fresh podcasts, refreshing the catalogue automatically and sending email use optional cloud services and provider accounts. When you are ready to set those up, follow the [cloud setup guide](docs/CLOUD-SETUP.md). This also explains deployment on Vercel and the separate worker that creates episodes.
-
-## How I used Codex
-
-I used Codex as a building partner to turn the initial bookshelf idea into a working prototype. Codex inspected the supplied paper and audio archives, built the interactive library and local draft flow, and helped develop the Astro version with Pip, transcripts, quizzes and feedback. It also used image generation to create the visual assets and recorded the prompts in the [artwork notes](public/art/README.md).
-
-One concrete example: I wanted listeners to answer three questions after an episode. Codex implemented the completion rule so seeking to the end opens the same quiz as listening through, wrote a test for the end-of-playback threshold, and checked the quiz and feedback flow in the browser. Codex also helped document the setup, create the architecture diagram and prepare this public repository.
