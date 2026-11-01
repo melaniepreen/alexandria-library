@@ -1,10 +1,12 @@
-# The Paper Familiar
+# Alexandria Library
+
+Alexandria Library turns research papers into conversational listening experiences, guided by Pip, your wizard-cat librarian.
 
 We are expected to learn at the speed of AI. Every day brings another paper, another breakthrough, another piece of documentation we are told to read to keep up.
 
 But what happens when reading quickly is not how your mind works? For a dyslexic or neurodivergent learner, the distance between curiosity and comprehension can feel unnecessarily wide. Why should a wall of text be the one-size-fits-all gateway to discovery?
 
-**The Paper Familiar** is a listening library for curious minds who want another way in. It brings research into a welcoming bookshelf, with conversational podcasts, transcripts, visual stories and small questions to help ideas stick. The goal is to turn recent arXiv research into engaging audio so your inner scientist can stay connected to discoveries at a pace that works for you.
+**Alexandria Library** is a listening library for curious minds who want another way in. It brings research into a welcoming bookshelf, with conversational podcasts, transcripts, visual stories and small questions to help ideas stick. The goal is to turn recent arXiv research into engaging audio so your inner scientist can stay connected to discoveries at a pace that works for you.
 
 Pip, your wizard-cat librarian, guides you around the shelf, keeps you company as you listen, and offers questions to help you reflect on what you’ve learned. Your feedback helps the app adapt how it explains ideas. The longer-term vision includes helping you judge a paper’s credibility and relevance.
 
@@ -78,7 +80,7 @@ The refresh process uses a three-hour cache and lock, deduplicates arXiv version
 
 ## Deploy
 
-The project includes an Astro Vercel adapter. Import [the GitHub repository](https://github.com/melaniepreen/paper-familiar) into Vercel, select Node 24, use `npm ci` to install and `npm run build` to build, and add the server environment variables for your selected services. The durable worker runs separately on a Node host. The [project summary](PROJECT.md) describes the audience, today’s build and a concrete example of Codex in the workflow.
+The project includes an Astro Vercel adapter. Import [the GitHub repository](https://github.com/melaniepreen/alexandria-library) into Vercel, select Node 24, use `npm ci` to install and `npm run build` to build, and add the server environment variables for your selected services. The durable worker runs separately on a Node host. The [project summary](PROJECT.md) describes the audience, today’s build and a concrete example of Codex in the workflow.
 
 ## Built with Codex
 
